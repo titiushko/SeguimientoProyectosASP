@@ -25,7 +25,7 @@
 				<tr><th align="right">Apellidos:</th><td><input name="apellidos" type="text" value="<%= tm_usuario(2) %>"></td></tr>
 				<tr><th align="right">Fecha de Nacimiento:</th><td><input name="nacimiento" type="text" value="<%= tm_usuario(3) %>" onClick="displayCalendar(document.formulario.nacimiento,'yyyy-mm-dd',this)" readonly="readonly"></td></tr>
 				<tr><th align="right">Password:</th><td><input name="password" type="text" value="<%= tm_usuario(4) %>"></td></tr>
-				<tr><td align="center"><input type="submit" value="Guardar"></td><td align="center"><input type="button" value="Cancelar" onClick="location.href = '../Consultar'" title="Volver al Catalogo de Usuarios"></td></tr>
+				<tr><td align="center"><input type="submit" value="Guardar"/></td><td align="center"><input type="button" value="Cancelar" onClick="location.href = '../Consultar'" title="Volver al Catalogo de Usuarios"/></td></tr>
 			</table>
 			</form>
 		</div>

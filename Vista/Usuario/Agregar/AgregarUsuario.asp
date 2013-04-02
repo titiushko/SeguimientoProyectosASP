@@ -15,11 +15,11 @@
 		<div id="cuerpo">
 			<h2>AGREGAR USUARIO</h2>
 			<table border="0" class="tabla">
-				<tr><th align="right">Usuario:</th><td><input type="text" value="<%= request.form("codigo") %>" disabled="disabled"></td></tr>
-				<tr><th align="right">Nombres:</th><td><input type="text" value="<%= request.form("nombres") %>" disabled="disabled"></td></tr>
-				<tr><th align="right">Apellidos:</th><td><input type="text" value="<%= request.form("apellidos") %>" disabled="disabled"></td></tr>
-				<tr><th align="right">Fecha de Nacimiento:</th><td><input type="text" value="<%= request.form("nacimiento") %>" disabled="disabled"></td></tr>
-				<tr><th align="right">Password:</th><td><input type="password" value="<%= request.form("password") %>" disabled="disabled"></td></tr>
+				<tr><th align="right">Usuario:</th><td><input type="text" value="<%= request.form("codigo") %>" disabled="disabled"/></td></tr>
+				<tr><th align="right">Nombres:</th><td><input type="text" value="<%= request.form("nombres") %>" disabled="disabled"/></td></tr>
+				<tr><th align="right">Apellidos:</th><td><input type="text" value="<%= request.form("apellidos") %>" disabled="disabled"/></td></tr>
+				<tr><th align="right">Fecha de Nacimiento:</th><td><input type="text" value="<%= request.form("nacimiento") %>" disabled="disabled"/></td></tr>
+				<tr><th align="right">Password:</th><td><input type="password" value="<%= request.form("password") %>" disabled="disabled"/></td></tr>
 			</table>
 			<p>Se agrego el usuario exitosamente.</p>
 			<a href="../Consultar/" title="Volver al Catalogo de Usuarios">Volver</a>
