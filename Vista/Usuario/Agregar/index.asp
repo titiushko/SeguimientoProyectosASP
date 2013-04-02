@@ -18,9 +18,9 @@
 				<tr><th align="right">Usuario:</th><td><input name="codigo" type="text"></td></tr>
 				<tr><th align="right">Nombres:</th><td><input name="nombres" type="text"></td></tr>
 				<tr><th align="right">Apellidos:</th><td><input name="apellidos" type="text"></td></tr>
-				<tr><th align="right">Fecha de Nacimiento:</th><td><input name="nacimiento" type="text" onClick="displayCalendar(document.formulario.nacimiento,'yyyy-mm-dd',this)" readonly="readonly"></td></tr>
+				<tr><th align="right">Fecha de Nacimiento:</th><td><input name="nacimiento" type="text" onClick="displayCalendar(document.formulario.nacimiento,'yyyy-mm-dd',this)" readonly="readonly"/></td></tr>
 				<tr><th align="right">Password:</th><td><input name="password" type="password"></td></tr>
-				<tr><td align="center"><input type="submit" value="Guardar"></td><td align="center"><input type="button" value="Cancelar" onClick="location.href = '../Consultar'" title="Volver al Catalogo de Usuarios"></td></tr>
+				<tr><td align="center"><input type="submit" value="Guardar"/></td><td align="center"><input type="button" value="Cancelar" onClick="location.href = '../Consultar'" title="Volver al Catalogo de Usuarios"/></td></tr>
 			</table>
 			</form>
 		</div>

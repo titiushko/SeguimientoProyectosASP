@@ -17,11 +17,11 @@
 		<div id="cuerpo">
 			<h2>ELIMINAR PROYECTO</h2>
 			<table border="0" class="tabla">
-				<tr><th align="right">Responsable:</th><td><input name="responsable" type="text" value="<%= tm_proyecto(0) %>" disabled="disabled"></td></tr>
-				<tr><th align="right">Nombre:</th><td><input name="nombre" type="text" value="<%= tm_proyecto(1) %>" disabled="disabled"></td></tr>
-				<tr><th align="right">Descripcion:</th><td><input name="descripcion" type="text" value="<%= tm_proyecto(2) %>" disabled="disabled"></td></tr>
-				<tr><th align="right">Fecha de Inicio:</th><td><input name="inicio" type="text" value="<%= tm_proyecto(3) %>" disabled="disabled"></td></tr>
-				<tr><th align="right">Fecha de Finalizacion:</th><td><input name="fin" type="text" value="<%= tm_proyecto(4) %>" disabled="disabled"></td></tr>
+				<tr><th align="right">Responsable:</th><td><input name="responsable" type="text" value="<%= tm_proyecto(0) %>" disabled="disabled"/></td></tr>
+				<tr><th align="right">Nombre:</th><td><input name="nombre" type="text" value="<%= tm_proyecto(1) %>" disabled="disabled"/></td></tr>
+				<tr><th align="right">Descripcion:</th><td><input name="descripcion" type="text" value="<%= tm_proyecto(2) %>" disabled="disabled"/></td></tr>
+				<tr><th align="right">Fecha de Inicio:</th><td><input name="inicio" type="text" value="<%= tm_proyecto(3) %>" disabled="disabled"/></td></tr>
+				<tr><th align="right">Fecha de Finalizacion:</th><td><input name="fin" type="text" value="<%= tm_proyecto(4) %>" disabled="disabled"/></td></tr>
 			</table>
 			<p>Se elimino el proyecto exitosamente.</p>
 			<a href="../Consultar/" title="Volver al Catalogo de Proyectos">Volver</a>
