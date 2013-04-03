@@ -1,5 +1,10 @@
-<!-- W.I.P. (Warning Idiot Programmer): Codigo Elvadorado por Titiushko -->
+﻿<!-- W.I.P. (Warning Idiot Programmer): Codigo Elvadorado por Titiushko -->
+<!--#include file="../../../ModeloControlador/Conexion.asp"-->
 <!--#include file="../../../ModeloControlador/Proyecto.asp"-->
+<%
+    dim consulta_sql
+    consulta_sql = sqlProyecto()
+%>
 <html>
 	<head>		
 		<title>Seguimiento de Proyectos</title>

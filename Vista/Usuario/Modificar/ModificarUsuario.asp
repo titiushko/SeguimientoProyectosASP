@@ -1,4 +1,5 @@
 <!-- W.I.P. (Warning Idiot Programmer): Codigo Elvadorado por Titiushko -->
+<!--#include file="../../../ModeloControlador/Conexion.asp"-->
 <!--#include file="../../../ModeloControlador/Usuario.asp"-->
 <%
 	modificarUsuario request.form("codigo"),request.form("identificador"),request.form("nombres"),request.form("apellidos"),request.form("nacimiento"),request.form("password")
