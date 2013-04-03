@@ -94,6 +94,9 @@ function eliminarUsuario(codigo)
 	dim delete_usuario
 	
 	conexion.open parametros_conexion
+
+	delete_tarea = "DELETE FROM tm_tarea WHERE codigo_tarea IN(SELECT a.codigo_tarea FROM tm_tarea a, tm_proyecto b, tm_usuario c WHERE a.codigo_proyecto = b.codigo_proyecto AND b.responsable_proyecto = c.codigo_usuario AND c.codigo_usuario = '"&codigo&"')"
+	conexion.execute(delete_tarea)
 	
 	delete_proyecto = "DELETE FROM tm_proyecto WHERE responsable_proyecto = '"&codigo&"'"
 	conexion.execute(delete_proyecto)
