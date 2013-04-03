@@ -1,11 +1,4 @@
 <!-- W.I.P. (Warning Idiot Programmer): Codigo Elvadorado por Titiushko -->
-<!--#include file="../../../ModeloControlador/Conexion.asp"-->
-<!--#include file="../../../ModeloControlador/Tarea.asp"-->
-<%
-	dim tm_tarea
-	tm_tarea = buscarTarea(request.form("codigo_tarea"))
-	eliminarProyecto(request.form("codigo_tarea"))
-%>
 <html>
 	<head>
 		<title>Seguimiento de Proyectos</title>
@@ -16,14 +9,8 @@
 			<h1>SEGUIMIENTO DE PROYECTOS</h1>
 		</div>
 		<div id="cuerpo">
-			<h2>ELIMINAR TAREA</h2>
-			<table border="0" class="tabla">
-				<tr><th align="right">Nombre:</th><td><input name="nombre" type="text" value="<%= tm_tarea(1) %>" disabled="disabled"/></td></tr>
-				<tr><th align="right">Descripcion:</th><td><input name="descripcion" type="text" value="<%= tm_tarea(2) %>" disabled="disabled"/></td></tr>
-				<tr><th align="right">Proyecto:</th><td><input name="fin" type="text" value="<%= tm_tarea(3) %>" disabled="disabled"/></td></tr>
-			</table>
-			<p>Se elimino el proyecto exitosamente.</p>
-			<a href="../Consultar/" title="Volver al Catalogo de Proyectos">Volver</a>
+			<h2>CONTENIDO NO EXISTE</h2>
+			<a href="../../../" title="Ir a la Pagina de Inicio">Inicio</a>
 		</div>
 	</body>
 </html>
