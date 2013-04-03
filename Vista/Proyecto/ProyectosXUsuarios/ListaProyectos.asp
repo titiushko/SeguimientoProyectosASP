@@ -1,7 +1,9 @@
-<!-- W.I.P. (Warning Idiot Programmer): Codigo Elvadorado por Titiushko -->
+﻿<!-- W.I.P. (Warning Idiot Programmer): Codigo Elvadorado por Titiushko -->
+<!--#include file="../../../ModeloControlador/Conexion.asp"-->
 <!--#include file="../../../ModeloControlador/Proyecto.asp"-->
 <%
-	consulta_sql = sqlProyectoXUsuarios(request.querystring("busqueda"))
+	dim consulta_sql
+    consulta_sql = sqlProyectoXUsuarios(request.querystring("busqueda"))
 %>
 <html>
 	<head>
