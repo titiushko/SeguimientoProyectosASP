@@ -1,10 +1,9 @@
 <!-- W.I.P. (Warning Idiot Programmer): Codigo Elvadorado por Titiushko -->
-<!--#include file="Conexion.asp"-->
 <%
-dim consulta_sql
-
-'consulta para alimentar el paginador
-consulta_sql = "SELECT codigo_proyecto, responsable_proyecto, nombre_proyecto, descripcion_proyecto, inicio_proyecto, fin_proyecto FROM tm_proyecto ORDER BY codigo_proyecto"
+'funcion que devuelve un string con la sentencia select de los registros que se encuentran en la tabla tm_proyecto para alimentar el paginador
+function sqlProyecto()
+	sqlProyecto = "SELECT codigo_proyecto, responsable_proyecto, nombre_proyecto, descripcion_proyecto, inicio_proyecto, fin_proyecto FROM tm_proyecto ORDER BY codigo_proyecto"
+end function
 
 'funcion que devuelve una matriz con todos los registros que se encuentran en la tabla tm_proyecto
 function consultarProyectos()
@@ -13,7 +12,7 @@ function consultarProyectos()
 	conexion.open parametros_conexion
 	
 	set registros_tm_proyecto = server.createobject("ADODB.recordset")		
-	select_tm_proyecto = consulta_sql
+	select_tm_proyecto = "SELECT codigo_proyecto, responsable_proyecto, nombre_proyecto, descripcion_proyecto, inicio_proyecto, fin_proyecto FROM tm_proyecto ORDER BY codigo_proyecto"
 	registros_tm_proyecto.open select_tm_proyecto, conexion, 1, 2
 	
 	cantidad_proyectos = 0

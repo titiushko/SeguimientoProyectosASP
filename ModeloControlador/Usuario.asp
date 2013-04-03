@@ -1,10 +1,9 @@
 <!-- W.I.P. (Warning Idiot Programmer): Codigo Elvadorado por Titiushko -->
-<!--#include file="Conexion.asp"-->
 <%
-dim consulta_sql
-
-'consulta para alimentar el paginador
-consulta_sql = "SELECT codigo_usuario, nombres_usuario, apellidos_usuario, nacimiento_usuario, password_usuario FROM tm_usuario ORDER BY codigo_usuario"
+'funcion que devuelve un string con la sentencia select de los registros que se encuentran en la tabla tm_usuario para alimentar el paginador
+function sqlUsuario()
+	sqlUsuario = "SELECT codigo_usuario, nombres_usuario, apellidos_usuario, nacimiento_usuario, password_usuario FROM tm_usuario ORDER BY codigo_usuario"
+end function
 
 'funcion que devuelve una matriz con todos los registros que se encuentran en la tabla tm_usuario
 function consultarUsuarios()

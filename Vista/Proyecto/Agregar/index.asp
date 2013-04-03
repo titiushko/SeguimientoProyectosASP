@@ -1,4 +1,5 @@
 <!-- W.I.P. (Warning Idiot Programmer): Codigo Elvadorado por Titiushko -->
+<!--#include file="../../../ModeloControlador/Conexion.asp"-->
 <!--#include file="../../../ModeloControlador/Proyecto.asp"-->
 <%	
 	dim tm_usuario
@@ -27,10 +28,10 @@
 							<% for i = lbound(tm_usuario) to ubound(tm_usuario) %>
 							<option><%= tm_usuario(i) %></option>
 							<% next %>
-						<select>
+						</select>
 					</td>
 				</tr>
-				<tr><th align="right">Nombre:</th><td><input name="nombre" type="text"></td></tr>
+				<tr><th align="right">Nombre:</th><td><input name="nombre" type="text"/></td></tr>
 				<tr><th align="right">Descripcion:</th><td><textarea name="descripcion"></textarea></td></tr>
 				<tr><th align="right">Fecha de Inicio:</th><td><input name="inicio" type="text" onClick="displayCalendar(document.formulario.inicio,'yyyy-mm-dd',this)" readonly="readonly"/></td></tr>
 				<tr><th align="right">Fecha de Finalizacion:</th><td><input name="fin" type="text" onClick="displayCalendar(document.formulario.fin,'yyyy-mm-dd',this)" readonly="readonly"/></td></tr>
