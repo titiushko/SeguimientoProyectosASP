@@ -1,0 +1,48 @@
+CONECTAR CUENTA DE USUARIO A REPOSITORIO
+git remote add origin https://titiushko@bitbucket.org/titiushko/seguimientoproyectosasp.git
+
+CONFIGURACION DE USUARIO
+git config --global user.name "titiushko"
+git config --global user.email titotauro@gmail.com
+
+PUSH
+- subir y actualizar todas las referencias remotas
+git push -u origin --all
+
+- subir solo la rama indicada
+git push origin <nombre rama local>
+
+FETCH
+git fetch origin
+
+REBASE
+git rebase origin/master
+
+BRANCH
+[local]
+- crear y seleccionar
+git checkout –b <nombre rama local> origin/master
+
+- eliminar
+git branch -d <nombre rama local>
+
+- cambiar nombre
+git branch -m <nombre rama local> <nuevo nombre rama local>
+
+- seleccionar
+git checkout <nombre rama local>
+
+[remota]
+- eliminar
+git push origin :<nombre rama remota>
+
+COMMIT
+- deshacer cambios locales
+git reset --hard origin/master
+
+- revertir el ultimo commit
+git reset --soft HEAD~1
+
+CLEAN
+- borrar archivos no versionados
+git clean -f
