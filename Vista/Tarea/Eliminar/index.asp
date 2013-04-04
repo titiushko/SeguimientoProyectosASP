@@ -4,7 +4,7 @@
 <%
 	dim tm_tarea
 	tm_tarea = buscarTarea(request.form("codigo_tarea"))
-	eliminarProyecto(request.form("codigo_tarea"))
+	eliminarTarea(request.form("codigo_tarea"))
 %>
 <html>
 	<head>
@@ -19,11 +19,11 @@
 			<h2>ELIMINAR TAREA</h2>
 			<table border="0" class="tabla">
 				<tr><th align="right">Nombre:</th><td><input name="nombre" type="text" value="<%= tm_tarea(1) %>" disabled="disabled"/></td></tr>
-				<tr><th align="right">Descripcion:</th><td><input name="descripcion" type="text" value="<%= tm_tarea(2) %>" disabled="disabled"/></td></tr>
+                <tr><th align="right">Descripcion:</th><td><textarea disabled="disabled"><%= tm_tarea(2) %></textarea></td></tr>
 				<tr><th align="right">Proyecto:</th><td><input name="fin" type="text" value="<%= tm_tarea(3) %>" disabled="disabled"/></td></tr>
 			</table>
 			<p>Se elimino el proyecto exitosamente.</p>
-			<a href="../Consultar/" title="Volver al Catalogo de Proyectos">Volver</a>
+			<a href="../Consultar/" title="Volver al Catalogo de Tareas">Volver</a>
 		</div>
 	</body>
 </html>

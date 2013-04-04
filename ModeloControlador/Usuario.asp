@@ -12,7 +12,7 @@ function consultarUsuarios()
 	conexion.open parametros_conexion
 	
 	set registros_tm_usuario = server.createobject("ADODB.recordset")		
-	select_tm_usuario = consulta_sql
+	select_tm_usuario = sqlUsuario()
 	registros_tm_usuario.open select_tm_usuario, conexion, 1, 2
 	
 	cantidad_usuarios = 0
@@ -37,7 +37,7 @@ function consultarUsuarios()
 end function
 
 'funcion que realiza la accion de insertar un nuevo registro en la tabla tm_usuario
-function agregarusuario(codigo, nombres, apellidos, nacimiento, password)
+function agregarUsuario(codigo, nombres, apellidos, nacimiento, password)
 	dim insert_tm_usuario
 	
 	conexion.open parametros_conexion
@@ -104,6 +104,33 @@ function eliminarUsuario(codigo)
 	conexion.execute(delete_usuario)
 	
 	conexion.close
+end function
+
+'funcion que devuelve un vector con el listado de todos los usuarios que existen en la tabla tm_usuario
+function listaUsuarios()
+	dim select_tm_usuario, cantidad_usuarios, tm_usuario(), registros_tm_usuario
+	
+	conexion.open parametros_conexion
+	
+	set registros_tm_usuario = server.createobject("ADODB.recordset")		
+	select_tm_usuario = "SELECT codigo_usuario FROM tm_usuario ORDER BY codigo_usuario"
+	registros_tm_usuario.open select_tm_usuario, conexion, 1, 2
+	
+	cantidad_usuarios = 0
+	redim tm_usuario(registros_tm_usuario.recordcount-1)
+	do while not registros_tm_usuario.eof
+		tm_usuario(cantidad_usuarios) = registros_tm_usuario("codigo_usuario")
+		cantidad_usuarios = cantidad_usuarios + 1
+		
+		registros_tm_usuario.movenext
+	loop
+	
+	registros_tm_usuario.close
+	set registros_tm_usuario = nothing
+	
+	conexion.close
+	
+	listaUsuarios = tm_usuario
 end function
 
 'se elimina el objeto conexion

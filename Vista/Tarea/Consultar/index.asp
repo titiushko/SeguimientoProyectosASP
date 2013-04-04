@@ -3,9 +3,9 @@
 <!--#include file="../../../ModeloControlador/Tarea.asp"-->
 <html>
         <head>          
-                <title>Seguimiento de Proyectos</title>
-                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-                <link rel="stylesheet" href="../../_Recursos/CSS/patron.css" type="text/css"/>
+            <title>Seguimiento de Proyectos</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+            <link rel="stylesheet" href="../../_Recursos/CSS/patron.css" type="text/css"/>
         </head>
         <body id="formato">
                 <div id="cabeza">

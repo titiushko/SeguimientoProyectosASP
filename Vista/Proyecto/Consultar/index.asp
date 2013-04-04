@@ -22,11 +22,11 @@
 			<table border="1" class="cuadricula tabla">
 				<thead>
 					<tr>
-						<th>Responsable Proyecto</th>
 						<th>Nombre Proyecto</th>
 						<th>Descripcion Proyecto</th>
 						<th>Fecha de Inicio</th>
 						<th>Fecha de Finalizacion</th>
+						<th>Responsable Proyecto</th>
 						<th colspan="2">Mantenimiento</th>
 					</tr>
 				</thead>
@@ -36,11 +36,11 @@
 				do while not registros.eof and cuantos_registros < tam_pagina
 				%>
 				<tr>
-					<td><%= registros.fields("responsable_proyecto") %></td>
 					<td><%= registros.fields("nombre_proyecto") %></td>
 					<td><%= registros.fields("descripcion_proyecto") %></td>
 					<td><%= registros.fields("inicio_proyecto") %></td>
 					<td><%= registros.fields("fin_proyecto") %></td>
+					<td><%= registros.fields("responsable_proyecto") %></td>
 					<td class="mantenimiento"><form action="../Modificar/" method="post"><input type="text" name="codigo_proyecto" class="oculto" value="<%= registros.fields("codigo_proyecto") %>"/><input type="submit" value="Editar"/></form></td>
 					<td class="mantenimiento"><form action="../Eliminar/" method="post"><input type="text" name="codigo_proyecto" class="oculto" value="<%= registros.fields("codigo_proyecto") %>"/><input type="submit" value="Eliminar"/></form></td>
 				</tr>
