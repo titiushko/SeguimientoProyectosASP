@@ -91,11 +91,17 @@ end function
 
 'funcion que realiza la accion de eliminar un registro de la tabla tm_proyecto
 function eliminarProyecto(codigo)
-	dim delete_proyecto
+	dim delete_responsable, delete_tarea, delete_proyecto
 	
 	conexion.open parametros_conexion
 	
-	delete_proyecto = "DELETE FROM tm_proyecto WHERE codigo_proyecto = '"&codigo&"'"
+	delete_responsable = "DELETE FROM tm_responsable WHERE codigo_tarea IN(SELECT codigo_tarea FROM tm_tarea WHERE codigo_proyecto = '"&codigo&"')"
+	conexion.execute(delete_responsable)
+	
+	delete_tarea = "DELETE FROM tm_tarea WHERE codigo_proyecto = '"&codigo&"'"
+	conexion.execute(delete_tarea)
+    
+    delete_proyecto = "DELETE FROM tm_proyecto WHERE codigo_proyecto = '"&codigo&"'"
 	conexion.execute(delete_proyecto)
 	
 	conexion.close
