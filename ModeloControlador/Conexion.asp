@@ -12,5 +12,5 @@
 	set conexion = server.createobject("ADODB.Connection")
 	
 	'se especifica la ubicacion de la base de datos sql server
-	parametros_conexion = "DRIVER="&controlador_local&";SERVER="&servidor&";DATABASE="&basedatos&";UID="&usuario&";PWD="&password
+	parametros_conexion = "DRIVER="&controlador_remoto&";SERVER="&servidor&";DATABASE="&basedatos&";UID="&usuario&";PWD="&password
 %>
