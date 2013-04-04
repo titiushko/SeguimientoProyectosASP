@@ -1,6 +1,6 @@
 <!-- W.I.P. (Warning Idiot Programmer): Codigo Elvadorado por Titiushko -->
 <!--#include file="../../../ModeloControlador/Conexion.asp"-->
-<!--#include file="../../../ModeloControlador/Tarea.asp"-->
+<!--#include file="../../../ModeloControlador/Proyecto.asp"-->
 <%	
 	dim tm_proyecto
 	tm_proyecto = listaProyectos()

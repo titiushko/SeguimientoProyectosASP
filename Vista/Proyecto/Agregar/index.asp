@@ -1,6 +1,6 @@
 <!-- W.I.P. (Warning Idiot Programmer): Codigo Elvadorado por Titiushko -->
 <!--#include file="../../../ModeloControlador/Conexion.asp"-->
-<!--#include file="../../../ModeloControlador/Proyecto.asp"-->
+<!--#include file="../../../ModeloControlador/Usuario.asp"-->
 <%	
 	dim tm_usuario
 	tm_usuario = listaUsuarios()
@@ -20,6 +20,10 @@
 			<h2>AGREGAR PROYECTO</h2>
 			<form name="formulario" action="AgregarProyecto.asp" method="POST">
 			<table border="0" class="tabla">
+				<tr><th align="right">Nombre:</th><td><input name="nombre" type="text"/></td></tr>
+				<tr><th align="right">Descripcion:</th><td><textarea name="descripcion"></textarea></td></tr>
+				<tr><th align="right">Fecha de Inicio:</th><td><input name="inicio" type="text" onClick="displayCalendar(document.formulario.inicio,'yyyy-mm-dd',this)" readonly="readonly"/></td></tr>
+				<tr><th align="right">Fecha de Finalizacion:</th><td><input name="fin" type="text" onClick="displayCalendar(document.formulario.fin,'yyyy-mm-dd',this)" readonly="readonly"/></td></tr>
 				<tr>
 					<th align="right">Responsable:</th>
 					<td>
@@ -31,10 +35,6 @@
 						</select>
 					</td>
 				</tr>
-				<tr><th align="right">Nombre:</th><td><input name="nombre" type="text"/></td></tr>
-				<tr><th align="right">Descripcion:</th><td><textarea name="descripcion"></textarea></td></tr>
-				<tr><th align="right">Fecha de Inicio:</th><td><input name="inicio" type="text" onClick="displayCalendar(document.formulario.inicio,'yyyy-mm-dd',this)" readonly="readonly"/></td></tr>
-				<tr><th align="right">Fecha de Finalizacion:</th><td><input name="fin" type="text" onClick="displayCalendar(document.formulario.fin,'yyyy-mm-dd',this)" readonly="readonly"/></td></tr>
 				<tr><td align="center"><input type="submit" value="Guardar"/></td><td align="center"><input type="button" value="Cancelar" onClick="location.href = '../Consultar'" title="Volver al Catalogo de Proyectos"/></td></tr>
 			</table>
 			</form>
