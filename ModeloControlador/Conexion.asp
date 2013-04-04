@@ -1,7 +1,9 @@
 <!-- W.I.P. (Warning Idiot Programmer): Codigo Elvadorado por Titiushko -->
 <%
 	dim servidor, basedatos, usuario, password, conexion, parametros_conexion
-	servidor  = "DELL-PC11\SQLEXPRESS"
+	controlador_local  = "{SQL Server}"
+    controlador_remoto = "{SQL Server Native Client 10.0}"
+    servidor  = "DELL-PC11\SQLEXPRESS"
 	basedatos = "seguimiento_proyecto"
 	usuario   = "practica_asp"
 	password  = "practica_asp"
@@ -10,5 +12,5 @@
 	set conexion = server.createobject("ADODB.Connection")
 	
 	'se especifica la ubicacion de la base de datos sql server
-	parametros_conexion = "DRIVER={SQL Server};SERVER="&servidor&";Database="&basedatos&";UID="&usuario&";PWD="&password
+	parametros_conexion = "DRIVER="&controlador_local&";SERVER="&servidor&";DATABASE="&basedatos&";UID="&usuario&";PWD="&password
 %>

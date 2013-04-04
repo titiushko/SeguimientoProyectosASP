@@ -90,7 +90,7 @@ end function
 
 'funcion que realiza la accion de eliminar un registro de la tabla tm_usuario
 function eliminarUsuario(codigo)
-	dim delete_usuario
+	dim delete_tarea, delete_proyecto, delete_usuario
 	
 	conexion.open parametros_conexion
 
