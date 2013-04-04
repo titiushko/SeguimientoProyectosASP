@@ -3,7 +3,7 @@
 <!--#include file="../../../ModeloControlador/Proyecto.asp"-->
 <%
 	dim consulta_sql
-    consulta_sql = sqlProyectoXUsuarios(request.querystring("busqueda"))
+    consulta_sql = sqlProyectosXUsuario(request.querystring("busqueda"))
 %>
 <html>
 	<head>
