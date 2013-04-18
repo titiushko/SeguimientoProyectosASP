@@ -1,4 +1,4 @@
-<!-- W.I.P. (Warning Idiot Programmer): Codigo Elvadorado por Titiushko -->
+<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
 <html>
 	<head>
 		<title>Seguimiento de Proyectos</title>
@@ -17,7 +17,7 @@
 				</tr>
 				<tr>
 					<td><a href="Vista/Proyecto/Consultar/"><h3>Proyectos</h3></a></td>
-					<td><a href="Vista/Proyecto/ProyectosXUsuarios/"><h3>Proyectos por Usuario</h3></a></td>
+					<td><a href="Vista/Proyecto/ProyectosXUsuario/"><h3>Proyectos por Usuario</h3></a></td>
 				</tr>
 				<tr>
 					<td><a href="Vista/Tarea/Consultar/"><h3>Tareas</h3></a></td>
