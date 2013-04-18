@@ -2,8 +2,8 @@
 <!--#include file="../../../ModeloControlador/Conexion.asp"-->
 <!--#include file="../../../ModeloControlador/Responsable.asp"-->
 <%
-    dim consulta_sql
-    consulta_sql = sqlResponsable()
+	dim consulta_sql
+	consulta_sql = sqlResponsable()
 %>
 <html>
 	<head>		
@@ -35,8 +35,8 @@
 				<tr>
 					<td><%= registros.fields("nombre_tarea") %></td>
 					<td><%= registros.fields("codigo_usuario") %></td>
-					<td class="mantenimiento"><form action="../Modificar/" method="post"><input type="text" name="codigo_proyecto" class="oculto" value="<%= registros.fields("codigo_responsable") %>"/><input type="submit" value="Editar"/></form></td>
-					<td class="mantenimiento"><form action="../Eliminar/" method="post"><input type="text" name="codigo_proyecto" class="oculto" value="<%= registros.fields("codigo_responsable") %>"/><input type="submit" value="Eliminar"/></form></td>
+					<td class="mantenimiento"><form action="../Modificar/" method="post"><input type="text" name="codigo_responsable" class="oculto" value="<%= registros.fields("codigo_responsable") %>"/><input type="submit" value="Editar"/></form></td>
+					<td class="mantenimiento"><form action="../Eliminar/" method="post"><input type="text" name="codigo_responsable" class="oculto" value="<%= registros.fields("codigo_responsable") %>"/><input type="submit" value="Eliminar"/></form></td>
 				</tr>
 				<%
 					cuantos_registros = cuantos_registros + 1

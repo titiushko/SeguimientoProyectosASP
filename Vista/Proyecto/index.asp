@@ -9,7 +9,7 @@
 			<h1>SEGUIMIENTO DE PROYECTOS</h1>
 		</div>
 		<div id="cuerpo">
-			<h2>CONTENIDO NO EXISTE</h2>			
+			<h2>CONTENIDO NO EXISTE</h2>
 			<a href="../../" title="Ir a la Pagina de Inicio">Inicio</a>
 		</div>
 	</body>

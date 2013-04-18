@@ -1,7 +1,7 @@
 <!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
 <!--#include file="../../../ModeloControlador/Conexion.asp"-->
 <!--#include file="../../../ModeloControlador/Usuario.asp"-->
-<%	
+<%
 	dim tm_usuario
 	tm_usuario = listaUsuarios()
 %>

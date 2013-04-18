@@ -11,7 +11,7 @@ function consultarProyectos()
 	
 	conexion.open parametros_conexion
 	
-	set registros_tm_proyecto = server.createobject("ADODB.recordset")		
+	set registros_tm_proyecto = server.createobject("ADODB.recordset")
 	select_tm_proyecto = sqlProyecto()
 	registros_tm_proyecto.open select_tm_proyecto, conexion, 1, 2
 	
@@ -51,20 +51,21 @@ end function
 
 'funcion que devuelve un vector con los datos de un registro que se desea consultar de la tabla tm_proyecto
 function buscarProyecto(codigo)
-	dim select_tm_proyecto, tm_proyecto(4), registros_tm_proyecto
+	dim select_tm_proyecto, tm_proyecto(5), registros_tm_proyecto
 	
 	conexion.open parametros_conexion
 	
-	set registros_tm_proyecto = server.createobject("ADODB.recordset")		
-	select_tm_proyecto = "SELECT nombre_proyecto, descripcion_proyecto, inicio_proyecto, fin_proyecto, responsable_proyecto FROM tm_proyecto WHERE codigo_proyecto = '"&cint(codigo)&"'"
+	set registros_tm_proyecto = server.createobject("ADODB.recordset")
+	select_tm_proyecto = "SELECT codigo_proyecto, nombre_proyecto, descripcion_proyecto, inicio_proyecto, fin_proyecto, responsable_proyecto FROM tm_proyecto WHERE codigo_proyecto = '"&cint(codigo)&"'"
 	registros_tm_proyecto.open select_tm_proyecto, conexion, 1, 2
 	
 	do while not registros_tm_proyecto.eof
-		tm_proyecto(0) = registros_tm_proyecto("nombre_proyecto")
-		tm_proyecto(1) = registros_tm_proyecto("descripcion_proyecto")
-		tm_proyecto(2) = registros_tm_proyecto("inicio_proyecto")
-		tm_proyecto(3) = registros_tm_proyecto("fin_proyecto")
-		tm_proyecto(4) = registros_tm_proyecto("responsable_proyecto")
+		tm_proyecto(0) = registros_tm_proyecto("codigo_proyecto")
+        tm_proyecto(1) = registros_tm_proyecto("nombre_proyecto")
+		tm_proyecto(2) = registros_tm_proyecto("descripcion_proyecto")
+		tm_proyecto(3) = registros_tm_proyecto("inicio_proyecto")
+		tm_proyecto(4) = registros_tm_proyecto("fin_proyecto")
+		tm_proyecto(5) = registros_tm_proyecto("responsable_proyecto")
 		
 		registros_tm_proyecto.movenext
 	loop
@@ -100,8 +101,8 @@ function eliminarProyecto(codigo)
 	
 	delete_tarea = "DELETE FROM tm_tarea WHERE codigo_proyecto = '"&codigo&"'"
 	conexion.execute(delete_tarea)
-    
-    delete_proyecto = "DELETE FROM tm_proyecto WHERE codigo_proyecto = '"&codigo&"'"
+	
+	delete_proyecto = "DELETE FROM tm_proyecto WHERE codigo_proyecto = '"&codigo&"'"
 	conexion.execute(delete_proyecto)
 	
 	conexion.close
@@ -127,15 +128,15 @@ function listaProyectos()
 	
 	conexion.open parametros_conexion
 	
-	set registros_tm_proyecto = server.createobject("ADODB.recordset")		
-	select_tm_proyecto = "SELECT codigo_proyecto, nombre_proyecto FROM tm_proyecto ORDER BY codigo_proyecto"
+	set registros_tm_proyecto = server.createobject("ADODB.recordset")
+	select_tm_proyecto = "SELECT codigo_proyecto, nombre_proyecto FROM tm_proyecto ORDER BY nombre_proyecto"
 	registros_tm_proyecto.open select_tm_proyecto, conexion, 1, 2
 	
 	cantidad_proyectos = 0
 	redim tm_proyecto(registros_tm_proyecto.recordcount-1,2)
 	do while not registros_tm_proyecto.eof
 		tm_proyecto(cantidad_proyectos,0) = registros_tm_proyecto("codigo_proyecto")
-        tm_proyecto(cantidad_proyectos,1) = registros_tm_proyecto("nombre_proyecto")
+		tm_proyecto(cantidad_proyectos,1) = registros_tm_proyecto("nombre_proyecto")
 		cantidad_proyectos = cantidad_proyectos + 1
 		
 		registros_tm_proyecto.movenext
