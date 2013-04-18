@@ -1,9 +1,9 @@
-<!-- W.I.P. (Warning Idiot Programmer): Codigo Elvadorado por Titiushko -->
+<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
 <%
-dim consulta_sql
-
-'consulta para alimentar el paginador
-consulta_sql = "SELECT a.codigo_tarea, a.nombre_tarea, a.descripcion_tarea, b.nombre_proyecto FROM tm_tarea a, tm_proyecto b WHERE a.codigo_proyecto = b.codigo_proyecto ORDER BY nombre_tarea"
+'funcion que devuelve un string con la sentencia select de los registros que se encuentran en la tabla tm_proyecto para alimentar el paginador
+function sqlTarea()
+	sqlTarea = "SELECT a.codigo_tarea, a.nombre_tarea, a.descripcion_tarea, b.nombre_proyecto FROM tm_tarea a, tm_proyecto b WHERE a.codigo_proyecto = b.codigo_proyecto ORDER BY nombre_tarea"
+end function
 
 'funcion que realiza la accion de insertar un nuevo registro en la tabla tm_tarea
 function agregarTarea(nombre, descripcion, proyecto)
@@ -66,5 +66,49 @@ function modificarTarea(codigo, nombre, descripcion, proyecto)
 	conexion.execute(update_tarea)
 	
 	conexion.close
+end function
+
+'funcion que devuelve un string con la sentencia select de los registros que se encuentran en la tabla tm_tarea que pertenezcan a un proyecto que se desea consultar
+function sqlTareasXProyecto(proyecto)
+	dim select_tm_tarea
+	
+	if responsable = "todos" then
+		busqueda = "ORDER BY nombre_tarea"
+	else
+		busqueda = "WHERE b.codigo_proyecto = "&proyecto&" ORDER BY a.nombre_tarea"
+	end if
+	select_tm_tarea = "SELECT a.codigo_tarea, a.nombre_tarea, a.descripcion_tarea, b.nombre_proyecto FROM tm_tarea a JOIN tm_proyecto b ON(a.codigo_proyecto = b.codigo_proyecto) "&busqueda
+	
+	sqlTareasXUsuario = select_tm_tarea
+end function
+
+'funcion que devuelve una matriz con todos los registros que se encuentran en la tabla tm_tarea
+function consulTareas()
+	dim select_tm_tarea, cantidad_tareas, tm_tarea(), registros_tm_tarea
+	
+	conexion.open parametros_conexion
+	
+	set registros_tm_tarea = server.createobject("ADODB.recordset")		
+	select_tm_tarea = sqlTarea()
+	registros_tm_tarea.open select_tm_tarea, conexion, 1, 2
+	
+	cantidad_tareas = 0
+	redim tm_tarea(registros_tm_tarea.recordcount-1,3)
+	do while not registros_tm_tarea.eof
+		tm_tarea(cantidad_tareas,0) = registros_tm_tarea("codigo_tarea")
+		tm_tarea(cantidad_tareas,1) = registros_tm_tarea("nombre_tarea")
+		tm_tarea(cantidad_tareas,2) = registros_tm_tarea("descripcion_tarea")
+		tm_tarea(cantidad_tareas,3) = registros_tm_tarea("nombre_proyecto")
+		cantidad_tareas = cantidad_tareas + 1
+		
+		registros_tm_tarea.movenext
+	loop
+	
+	registros_tm_tarea.close
+	set registros_tm_tarea = nothing
+	
+	conexion.close
+	
+	consultarTareas = tm_tarea
 end function
 %>

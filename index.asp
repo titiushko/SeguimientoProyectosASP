@@ -1,4 +1,4 @@
-<!-- W.I.P. (Warning Idiot Programmer): Codigo Elvadorado por Titiushko -->
+<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
 <html>
 	<head>
 		<title>Seguimiento de Proyectos</title>
@@ -21,7 +21,7 @@
 				</tr>
 				<tr>
 					<td><a href="Vista/Tarea/Consultar/"><h3>Tareas</h3></a></td>
-					<td></td>
+					<td><a href="Vista/Tarea/TareasXProyecto/"><h3>Tareas por Proyecto</h3></a></td>
 				</tr>
 				<tr>
 					<td><a href="Vista/Responsable/Consultar/"><h3>Responsables</h3></a></td>
