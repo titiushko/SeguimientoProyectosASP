@@ -1,3 +1,4 @@
+<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
 <%
 	registros.close
 	set registros = nothing
