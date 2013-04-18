@@ -1,4 +1,4 @@
-/* W.I.P. (Warning Idiot Programmer): Codigo Elvadorado por Titiushko */
+/* W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko */
 function mostrarProyectosXUsuarios(codigo_usuario){
 	//location.href = "ListaProyectos.asp?busqueda="+codigo_usuario;
 	window.open('ListaProyectos.asp?busqueda='+codigo_usuario,'lista_proyectos');
