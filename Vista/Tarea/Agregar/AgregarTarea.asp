@@ -5,7 +5,7 @@
 <%
 	dim tm_proyecto
 	tm_proyecto = buscarProyecto(request.form("proyecto"))
-    agregarTarea request.form("nombre"),request.form("descripcion"),request.form("proyecto")
+	agregarTarea request.form("nombre"),request.form("descripcion"),request.form("proyecto")
 
 %>
 <html>
@@ -22,10 +22,10 @@
 			<table border="0" class="tabla">
 				<tr><th align="right">Nombre:</th><td><input type="text" value="<%= request.form("nombre") %>" disabled="disabled"/></td></tr>
 				<tr><th align="right">Descripcion:</th><td><textarea disabled="disabled"><%= request.form("descripcion") %></textarea></td></tr>
-				<tr><th align="right">Proyecto:</th><td><input type="text" value="<%= tm_proyecto(0) %>" disabled="disabled"/></td></tr>
+				<tr><th align="right">Proyecto:</th><td><input type="text" value="<%= tm_proyecto(1) %>" disabled="disabled"/></td></tr>
 			</table>
-			<p>Se agrego el proyecto exitosamente.</p>
-			<a href="../Consultar/" title="Volver al Catalogo de Proyectos">Volver</a>
+			<p>Se agrego la tarea exitosamente.</p>
+			<a href="../Consultar/" title="Volver al Catalogo de Tareas">Volver</a>
 		</div>
 	</body>
 </html>

@@ -35,12 +35,12 @@ function buscarTarea(codigo)
 	
 	conexion.open parametros_conexion
 	
-	set registros_tm_tarea = server.createobject("ADODB.recordset")		
+	set registros_tm_tarea = server.createobject("ADODB.recordset")
 	select_tm_tarea = "SELECT a.codigo_tarea, a.nombre_tarea, a.descripcion_tarea, b.nombre_proyecto FROM tm_tarea a, tm_proyecto b WHERE a.codigo_proyecto = b.codigo_proyecto AND codigo_tarea = '"&cint(codigo)&"'"
 	registros_tm_tarea.open select_tm_tarea, conexion, 1, 2
 	
 	do while not registros_tm_tarea.eof
-        tm_tarea(0) = registros_tm_tarea("codigo_tarea")
+		tm_tarea(0) = registros_tm_tarea("codigo_tarea")
 		tm_tarea(1) = registros_tm_tarea("nombre_tarea")
 		tm_tarea(2) = registros_tm_tarea("descripcion_tarea")
 		tm_tarea(3) = registros_tm_tarea("nombre_proyecto")
@@ -88,7 +88,7 @@ function consulTareas()
 	
 	conexion.open parametros_conexion
 	
-	set registros_tm_tarea = server.createobject("ADODB.recordset")		
+	set registros_tm_tarea = server.createobject("ADODB.recordset")
 	select_tm_tarea = sqlTarea()
 	registros_tm_tarea.open select_tm_tarea, conexion, 1, 2
 	
@@ -110,5 +110,33 @@ function consulTareas()
 	conexion.close
 	
 	consultarTareas = tm_tarea
+end function
+
+'funcion que devuelve un vector con el listado de todos los tareas que existen en la tabla tm_tarea
+function listaTareas()
+	dim select_tm_tarea, cantidad_tareas, tm_tarea(), registros_tm_tarea
+	
+	conexion.open parametros_conexion
+	
+	set registros_tm_tarea = server.createobject("ADODB.recordset")
+	select_tm_tarea = "SELECT codigo_tarea, nombre_tarea FROM tm_tarea ORDER BY nombre_tarea"
+	registros_tm_tarea.open select_tm_tarea, conexion, 1, 2
+	
+	cantidad_tareas = 0
+	redim tm_tarea(registros_tm_tarea.recordcount-1,2)
+	do while not registros_tm_tarea.eof
+		tm_tarea(cantidad_tareas,0) = registros_tm_tarea("codigo_tarea")
+		tm_tarea(cantidad_tareas,1) = registros_tm_tarea("nombre_tarea")
+		cantidad_tareas = cantidad_tareas + 1
+		
+		registros_tm_tarea.movenext
+	loop
+	
+	registros_tm_tarea.close
+	set registros_tm_tarea = nothing
+	
+	conexion.close
+	
+	listaTareas = tm_tarea
 end function
 %>

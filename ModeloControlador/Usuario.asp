@@ -11,7 +11,7 @@ function consultarUsuarios()
 	
 	conexion.open parametros_conexion
 	
-	set registros_tm_usuario = server.createobject("ADODB.recordset")		
+	set registros_tm_usuario = server.createobject("ADODB.recordset")
 	select_tm_usuario = sqlUsuario()
 	registros_tm_usuario.open select_tm_usuario, conexion, 1, 2
 	
@@ -54,7 +54,7 @@ function buscarUsuario(codigo)
 	
 	conexion.open parametros_conexion
 	
-	set registros_tm_usuario = server.createobject("ADODB.recordset")		
+	set registros_tm_usuario = server.createobject("ADODB.recordset")
 	select_tm_usuario = "SELECT codigo_usuario, nombres_usuario, apellidos_usuario, nacimiento_usuario, password_usuario FROM tm_usuario WHERE codigo_usuario = '"&codigo&"'"
 	registros_tm_usuario.open select_tm_usuario, conexion, 1, 2
 	
@@ -115,7 +115,7 @@ function listaUsuarios()
 	
 	conexion.open parametros_conexion
 	
-	set registros_tm_usuario = server.createobject("ADODB.recordset")		
+	set registros_tm_usuario = server.createobject("ADODB.recordset")
 	select_tm_usuario = "SELECT codigo_usuario FROM tm_usuario ORDER BY codigo_usuario"
 	registros_tm_usuario.open select_tm_usuario, conexion, 1, 2
 	

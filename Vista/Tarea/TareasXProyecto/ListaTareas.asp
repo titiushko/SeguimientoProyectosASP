@@ -1,9 +1,9 @@
-﻿<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
+<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
 <!--#include file="../../../ModeloControlador/Conexion.asp"-->
 <!--#include file="../../../ModeloControlador/Tarea.asp"-->
 <%
 	dim consulta_sql
-    consulta_sql = sqlTareasXProyecto(request.querystring("busqueda"))
+	consulta_sql = sqlTareasXProyecto(request.querystring("busqueda"))
 %>
 <html>
 	<head>
@@ -19,8 +19,8 @@
 				<thead>
 					<tr>
 						<th>Nombre Tarea</th>
-                        <th>Descripcion Tarea</th>
-                        <th>Nombre Proyecto</th>
+						<th>Descripcion Tarea</th>
+						<th>Nombre Proyecto</th>
 					</tr>
 				</thead>
 				<tbody>
