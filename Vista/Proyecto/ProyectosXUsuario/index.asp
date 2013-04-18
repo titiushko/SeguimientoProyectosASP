@@ -11,7 +11,7 @@
 		</div>
 		<div id="cuerpo">
 			<h2>PROYECTOS POR USUARIOS</h2>
-			<iframe width="100%" height="336" src="ListaUsuarios.asp" frameborder="0"></iframe>			
+			<iframe width="100%" height="336" src="ListaUsuarios.asp" frameborder="0"></iframe>
 			<iframe name="lista_proyectos" width="100%" height="316" src="ListaProyectos.asp?busqueda=todos" frameborder="0"></iframe>
 			<br/><a href="../../../" title="Volver a la Pagina de Inicio">Volver</a>
 		</div>

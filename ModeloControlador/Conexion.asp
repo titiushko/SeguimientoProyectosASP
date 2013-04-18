@@ -2,8 +2,8 @@
 <%
 	dim servidor, basedatos, usuario, password, conexion, parametros_conexion
 	controlador_local  = "{SQL Server}"
-    controlador_remoto = "{SQL Server Native Client 10.0}"
-    servidor  = "DELL-PC11"
+	controlador_remoto = "{SQL Server Native Client 10.0}"
+	servidor  = "DELL-PC11"
 	basedatos = "seguimiento_proyecto"
 	usuario   = "practica_asp"
 	password  = "practica_asp"

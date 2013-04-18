@@ -23,18 +23,18 @@
 			<form name="formulario" action="ModificarTarea.asp" method="POST">
 			<table border="0" class="tabla">
 				<input name="codigo" type="text" value="<%= request.form("codigo_tarea") %>" class="oculto"/>
-                <tr><th align="right">Nombre:</th><td><input name="nombre" type="text" value="<%= tm_tarea(1) %>"/></td></tr>
+				<tr><th align="right">Nombre:</th><td><input name="nombre" type="text" value="<%= tm_tarea(1) %>"/></td></tr>
 				<tr><th align="right">Descripcion:</th><td><textarea name="descripcion"><%= tm_tarea(2) %></textarea></td></tr>
 				<tr>
 					<th align="right">Proyecto:</th>
 					<td>
 						<select name="proyecto">
-							<option selected></option>
+							<option selected="selected"></option>
 							<%
-                            for i = lbound(tm_proyecto) to ubound(tm_proyecto)
-							    if tm_tarea(3) = tm_proyecto(i,1) then
-                            %>
-							<option value="<%= tm_proyecto(i,0) %>" selected><%= tm_proyecto(i,1) %></option>
+							for i = lbound(tm_proyecto) to ubound(tm_proyecto)
+								if tm_tarea(3) = tm_proyecto(i,1) then
+							%>
+							<option value="<%= tm_proyecto(i,0) %>" selected="selected"><%= tm_proyecto(i,1) %></option>
 							<%
 								else
 							%>

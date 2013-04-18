@@ -1,9 +1,9 @@
-﻿<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
+<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
 <!--#include file="../../../ModeloControlador/Conexion.asp"-->
 <!--#include file="../../../ModeloControlador/Proyecto.asp"-->
 <%
-    dim consulta_sql
-    consulta_sql = sqlProyecto()
+	dim consulta_sql
+	consulta_sql = sqlProyecto()
 %>
 <html>
 	<head>

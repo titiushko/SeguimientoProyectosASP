@@ -23,19 +23,19 @@
 			<form name="formulario" action="ModificarProyecto.asp" method="POST">
 			<table border="0" class="tabla">
 				<input name="codigo" type="text" value="<%= request.form("codigo_proyecto") %>" class="oculto"/>
-				<tr><th align="right">Nombre:</th><td><input name="nombre" type="text" value="<%= tm_proyecto(0) %>"/></td></tr>
-				<tr><th align="right">Descripcion:</th><td><textarea name="descripcion"><%= tm_proyecto(1) %></textarea></td></tr>
-				<tr><th align="right">Fecha de Inicio:</th><td><input name="inicio" type="text" value="<%= tm_proyecto(2) %>" onClick="displayCalendar(document.formulario.inicio,'yyyy-mm-dd',this)" readonly="readonly"/></td></tr>
-				<tr><th align="right">Fecha de Finalizacion:</th><td><input name="fin" type="text" value="<%= tm_proyecto(3) %>" onClick="displayCalendar(document.formulario.fin,'yyyy-mm-dd',this)" readonly="readonly"/></td></tr>
+				<tr><th align="right">Nombre:</th><td><input name="nombre" type="text" value="<%= tm_proyecto(1) %>"/></td></tr>
+				<tr><th align="right">Descripcion:</th><td><textarea name="descripcion"><%= tm_proyecto(2) %></textarea></td></tr>
+				<tr><th align="right">Fecha de Inicio:</th><td><input name="inicio" type="text" value="<%= tm_proyecto(3) %>" onClick="displayCalendar(document.formulario.inicio,'yyyy-mm-dd',this)" readonly="readonly"/></td></tr>
+				<tr><th align="right">Fecha de Finalizacion:</th><td><input name="fin" type="text" value="<%= tm_proyecto(4) %>" onClick="displayCalendar(document.formulario.fin,'yyyy-mm-dd',this)" readonly="readonly"/></td></tr>
 				<tr>
 					<th align="right">Responsable:</th>
 					<td>
 						<select name="responsable">
 							<%
 							for i = lbound(tm_usuario) to ubound(tm_usuario)
-								if tm_proyecto(4) = tm_usuario(i) then
+								if tm_proyecto(5) = tm_usuario(i) then
 							%>
-							<option selected><%= tm_usuario(i) %></option>
+							<option selected="selected"><%= tm_usuario(i) %></option>
 							<%
 								else
 							%>
