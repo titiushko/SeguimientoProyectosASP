@@ -1,4 +1,4 @@
-<!-- W.I.P. (Warning Idiot Programmer): Codigo Elvadorado por Titiushko -->
+<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
 <%
 'funcion que devuelve un string con la sentencia select de los registros que se encuentran en la tabla tm_proyecto para alimentar el paginador
 function sqlProyecto()
