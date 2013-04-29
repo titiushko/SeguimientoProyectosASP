@@ -69,17 +69,21 @@ function modificarTarea(codigo, nombre, descripcion, proyecto)
 end function
 
 'funcion que devuelve un string con la sentencia select de los registros que se encuentran en la tabla tm_tarea que pertenezcan a un proyecto que se desea consultar
-function sqlTareasXProyecto(proyecto)
+function sqlTareasXProyectoXUsuario(codigo)
 	dim select_tm_tarea
 	
-	if proyecto = "todos" then
+	if codigo = "todos" then
 		busqueda = "ORDER BY nombre_tarea"
 	else
-		busqueda = "WHERE b.codigo_proyecto = "&proyecto&" ORDER BY a.nombre_tarea"
+        if isnumeric(codigo) then
+		    busqueda = "JOIN tm_proyecto b ON(a.codigo_proyecto = b.codigo_proyecto) WHERE b.codigo_proyecto = "&codigo&" ORDER BY a.nombre_tarea"
+        else
+            busqueda = "JOIN tm_responsable b ON(a.codigo_tarea = b.codigo_tarea) JOIN tm_usuario c ON(b.codigo_usuario = c.codigo_usuario) WHERE c.codigo_usuario = '"&codigo&"' ORDER BY a.nombre_tarea"
+        end if
 	end if
-	select_tm_tarea = "SELECT a.codigo_tarea, a.nombre_tarea, a.descripcion_tarea, b.nombre_proyecto FROM tm_tarea a JOIN tm_proyecto b ON(a.codigo_proyecto = b.codigo_proyecto) "&busqueda
+	select_tm_tarea = "SELECT a.codigo_tarea, a.nombre_tarea, a.descripcion_tarea FROM tm_tarea a "&busqueda
 	
-	sqlTareasXProyecto = select_tm_tarea
+	sqlTareasXProyectoXUsuario = select_tm_tarea
 end function
 
 'funcion que devuelve una matriz con todos los registros que se encuentran en la tabla tm_tarea

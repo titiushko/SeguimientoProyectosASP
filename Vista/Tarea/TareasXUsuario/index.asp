@@ -10,9 +10,9 @@
 			<h1>SEGUIMIENTO DE PROYECTOS</h1>
 		</div>
 		<div id="cuerpo">
-			<h2>PROYECTOS POR USUARIO</h2>
-			<iframe width="100%" height="336" src="ListaUsuarios.asp" frameborder="0"></iframe>
-			<iframe name="lista_proyectos" width="100%" height="316" src="ListaProyectos.asp?busqueda=todos" frameborder="0"></iframe>
+			<h2>TAREAS POR USUARIO</h2>
+			<iframe width="100%" height="356" src="ListaUsuarios.asp" frameborder="0"></iframe>
+			<iframe name="lista_tareas" width="100%" height="316" src="ListaTareas.asp?busqueda=todos" frameborder="0"></iframe>
 			<br/><a href="../../../" title="Volver a la Pagina de Inicio">Volver</a>
 		</div>
 	</body>

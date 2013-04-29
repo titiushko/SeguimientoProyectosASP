@@ -1,11 +1,11 @@
 /* W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko */
-function mostrarProyectosXUsuarios(codigo_usuario){
+function mostrarProyectosXUsuario(codigo_usuario){
 	//location.href = "ListaProyectos.asp?busqueda="+codigo_usuario;
 	window.open('ListaProyectos.asp?busqueda='+codigo_usuario,'lista_proyectos');
 }
 
-function mostrarTareasXProyecto(codigo_proyecto) {
-	window.open('ListaTareas.asp?busqueda=' + codigo_proyecto, 'lista_tareas');
+function mostrarTareasXProyectoXUsuario(codigo) {
+	window.open('ListaTareas.asp?busqueda=' + codigo, 'lista_tareas');
 }
 
 function soloFlechas(elEvento){
