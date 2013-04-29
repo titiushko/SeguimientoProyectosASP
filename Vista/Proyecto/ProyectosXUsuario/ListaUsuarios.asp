@@ -1,4 +1,4 @@
-<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
+﻿<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
 <!--#include file="../../../ModeloControlador/Conexion.asp"-->
 <!--#include file="../../../ModeloControlador/Usuario.asp"-->
 <%
@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="../../_Recursos/CSS/patron.css" type="text/css"/>
 		<script type="text/javascript" src="../../_Recursos/JS/funciones.js"></script>
 	</head>
-	<body id="medio_formato" onLoad="document.forms[0].user0.focus()" background="red">
+	<body id="medio_formato" onLoad="document.forms[0].user0.focus()">
 		<div id="medio_cuerpo">
 			<!--#include file="../../_Recursos/ASP/Paginador_parte1.asp"-->
 			<form>

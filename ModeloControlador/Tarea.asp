@@ -72,14 +72,14 @@ end function
 function sqlTareasXProyecto(proyecto)
 	dim select_tm_tarea
 	
-	if responsable = "todos" then
+	if proyecto = "todos" then
 		busqueda = "ORDER BY nombre_tarea"
 	else
 		busqueda = "WHERE b.codigo_proyecto = "&proyecto&" ORDER BY a.nombre_tarea"
 	end if
 	select_tm_tarea = "SELECT a.codigo_tarea, a.nombre_tarea, a.descripcion_tarea, b.nombre_proyecto FROM tm_tarea a JOIN tm_proyecto b ON(a.codigo_proyecto = b.codigo_proyecto) "&busqueda
 	
-	sqlTareasXUsuario = select_tm_tarea
+	sqlTareasXProyecto = select_tm_tarea
 end function
 
 'funcion que devuelve una matriz con todos los registros que se encuentran en la tabla tm_tarea
