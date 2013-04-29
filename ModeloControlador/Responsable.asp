@@ -2,7 +2,7 @@
 <%
 'funcion que devuelve un string con la sentencia select de los registros que se encuentran en la tabla tm_responsable para alimentar el paginador
 function sqlResponsable()
-	sqlResponsable = "SELECT a.codigo_responsable, b.nombre_tarea, c.codigo_usuario FROM tm_responsable a JOIN tm_tarea b ON(a.codigo_tarea = b.codigo_tarea) JOIN tm_usuario c ON(a.codigo_usuario = c.codigo_usuario) ORDER BY a.codigo_responsable"
+	sqlResponsable = "SELECT a.codigo_responsable, b.nombre_tarea, c.codigo_usuario FROM tm_responsable a JOIN tm_tarea b ON(a.codigo_tarea = b.codigo_tarea) JOIN tm_usuario c ON(a.codigo_usuario = c.codigo_usuario) ORDER BY b.nombre_tarea"
 end function
 
 'funcion que devuelve un vector con los datos de un registro que se desea consultar de la tabla tm_responsable

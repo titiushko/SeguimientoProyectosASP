@@ -32,7 +32,7 @@
 				do while not registros.eof and cuantos_registros < tam_pagina
 				%>
 				<tr>
-					<td><input size="13" name="user<%= cuantos_registros %>" onKeyPress="return soloFlechas(event), movimientoVertical(event,<%= cuantos_registros %>)" onFocus="mostrarTareasXProyecto('<%= registros.fields("codigo_proyecto") %>')" onClick="mostrarTareasXProyecto('<%= registros.fields("codigo_proyecto") %>')" type="text" value="<%= registros.fields("nombre_proyecto") %>"/></td>
+					<td><input size="13" name="user<%= cuantos_registros %>" onKeyPress="return soloFlechas(event), movimientoVertical(event,<%= cuantos_registros %>)" onFocus="mostrarTareasXProyectoXUsuario('<%= registros.fields("codigo_proyecto") %>')" onClick="mostrarTareasXProyectoXUsuario('<%= registros.fields("codigo_proyecto") %>')" type="text" value="<%= registros.fields("nombre_proyecto") %>"/></td>
 					<td><%= registros.fields("descripcion_proyecto") %></td>
 					<td><%= registros.fields("inicio_proyecto") %></td>
 					<td><%= registros.fields("fin_proyecto") %></td>
