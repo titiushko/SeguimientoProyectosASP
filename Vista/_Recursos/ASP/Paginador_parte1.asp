@@ -1,3 +1,4 @@
+<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
 <%
 dim pagina_actual, paginas_totales, tam_pagina, cuantos_registros, registros
 

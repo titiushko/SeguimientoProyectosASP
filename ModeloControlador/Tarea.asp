@@ -83,7 +83,7 @@ function sqlTareasXProyecto(proyecto)
 end function
 
 'funcion que devuelve una matriz con todos los registros que se encuentran en la tabla tm_tarea
-function consulTareas()
+function consultarTareas()
 	dim select_tm_tarea, cantidad_tareas, tm_tarea(), registros_tm_tarea
 	
 	conexion.open parametros_conexion

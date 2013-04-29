@@ -44,7 +44,7 @@ function modificarResponsable(codigo, tarea, usuario)
 end function
 
 'funcion que devuelve una matriz con todos los registros que se encuentran en la tabla tm_responsable
-function consulResponsables()
+function consultarResponsables()
 	dim select_tm_responsable, cantidad_responsables, tm_responsable(), registros_tm_responsable
 	
 	conexion.open parametros_conexion
@@ -70,5 +70,17 @@ function consulResponsables()
 	conexion.close
 	
 	consultarResponsables = tm_responsable
+end function
+
+'funcion que realiza la accion de eliminar un registro de la tabla tm_responsable
+function eliminarResponsable(codigo)
+	dim delete_responsable
+	
+	conexion.open parametros_conexion
+	
+	delete_responsable = "DELETE FROM tm_responsable WHERE codigo_responsable = '"&codigo&"'"
+	conexion.execute(delete_responsable)
+	
+	conexion.close
 end function
 %>
