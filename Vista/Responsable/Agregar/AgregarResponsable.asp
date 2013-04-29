@@ -4,8 +4,9 @@
 <!--#include file="../../../ModeloControlador/Tarea.asp"-->
 <%
 	dim tm_tarea
-	modificarResponsable request.form("codigo"),request.form("tarea"),request.form("usuario")
 	tm_tarea = buscarTarea(request.form("tarea"))
+	agregarResponsable request.form("tarea"),request.form("usuario")
+
 %>
 <html>
 	<head>
@@ -17,12 +18,12 @@
 			<h1>SEGUIMIENTO DE PROYECTOS</h1>
 		</div>
 		<div id="cuerpo">
-			<h2>MODIFICAR RESPONSABLE</h2>
+			<h2>AGREGAR RESPONSABLE</h2>
 			<table border="0" class="tabla">
 				<tr><th align="right">Tarea:</th><td><input type="text" value="<%= tm_tarea(1) %>" disabled="disabled"/></td></tr>
 				<tr><th align="right">Usuario:</th><td><input type="text" value="<%= request.form("usuario") %>" disabled="disabled"/></td></tr>
 			</table>
-			<p>Se guardaron los cambios exitosamente.</p>
+			<p>Se agrego el responsable exitosamente.</p>
 			<a href="../Consultar/" title="Volver al Catalogo de Responsables">Volver</a>
 		</div>
 	</body>

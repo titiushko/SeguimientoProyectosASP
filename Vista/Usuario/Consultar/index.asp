@@ -1,4 +1,4 @@
-<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
+﻿<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
 <!--#include file="../../../ModeloControlador/Conexion.asp"-->
 <!--#include file="../../../ModeloControlador/Usuario.asp"-->
 <%
@@ -13,7 +13,7 @@
 	</head>
 	<body id="formato">
 		<div id="cabeza">
-			<h1>SEGUIMIENTO DE PROYECTOS</h1>
+			<h1>SEGUIMIENTO DE USUARIOS</h1>
 		</div>
 		<div id="cuerpo">
 			<h2>MANTENIMIENTO DE PROYECTOS</h2>
