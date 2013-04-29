@@ -83,4 +83,16 @@ function eliminarResponsable(codigo)
 	
 	conexion.close
 end function
+
+'funcion que realiza la accion de insertar un nuevo registro en la tabla tm_responsable
+function agregarResponsable(tarea, usuario)
+	dim insert_tm_responsable
+	
+	conexion.open parametros_conexion
+	
+	insert_tm_responsable = "INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario) VALUES((SELECT MAX(codigo_responsable)+1 FROM tm_responsable), '"&tarea&"', '"&usuario&"')"
+	conexion.execute(insert_tm_responsable)
+	
+	conexion.close
+end function
 %>
