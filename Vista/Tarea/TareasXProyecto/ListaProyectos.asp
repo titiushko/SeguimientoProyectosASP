@@ -1,4 +1,4 @@
-<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
+﻿<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
 <!--#include file="../../../ModeloControlador/Conexion.asp"-->
 <!--#include file="../../../ModeloControlador/Proyecto.asp"-->
 <%
@@ -10,6 +10,7 @@
 		<title>Seguimiento de Proyectos</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="../../_Recursos/CSS/patron.css" type="text/css"/>
+        <script type="text/javascript" src="../../_Recursos/JS/funciones.js"></script>
 	</head>
 	<body id="medio_formato" onLoad="document.forms[0].user0.focus()">
 		<div id="medio_cuerpo">
