@@ -6,7 +6,6 @@ function mostrarProyectosXUsuarios(codigo_usuario){
 
 function mostrarTareasXProyecto(codigo_proyecto) {
 	window.open('ListaTareas.asp?busqueda=' + codigo_proyecto, 'lista_tareas');
-	alert("ola ke ase");
 }
 
 function soloFlechas(elEvento){
