@@ -27,3 +27,11 @@ function movimientoVertical(elEvento,i){
 	if(codigoCaracter == 38){elemento = eval("document.forms[0].user"+(i-1)); elemento.focus();}
 	if(codigoCaracter == 40){elemento = eval("document.forms[0].user"+(i+1)); elemento.focus();}
 }
+
+function cambiarTypeTextPassword(F) {
+    // password: nombre del campo tipo password
+    // cambiar: nombre del checkbox
+    var input_formulario = F.password;
+    if (F.cambiar.checked) { input_formulario.setAttribute("type", "text"); }
+    else { input_formulario.setAttribute("type", "password"); }
+}
