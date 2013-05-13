@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="../../_Recursos/CSS/patron.css" type="text/css"/>
 		<link rel="stylesheet" href="../../_Recursos/Plugins/Calendario/calendario.css" type="text/css"/>
 		<script type="text/javascript" src="../../_Recursos/Plugins/Calendario/calendario.js"></script>
+        <script type="text/javascript" src="../../_Recursos/JS/funciones.js"></script>
 	</head>
 	<body id="formato">
 		<div id="cabeza">
@@ -25,7 +26,7 @@
 				<tr><th align="right">Nombres:</th><td><input name="nombres" type="text" value="<%= tm_usuario(1) %>"/></td></tr>
 				<tr><th align="right">Apellidos:</th><td><input name="apellidos" type="text" value="<%= tm_usuario(2) %>"/></td></tr>
 				<tr><th align="right">Fecha de Nacimiento:</th><td><input name="nacimiento" type="text" value="<%= tm_usuario(3) %>" onClick="displayCalendar(document.formulario.nacimiento,'yyyy-mm-dd',this)" readonly="readonly"/></td></tr>
-				<tr><th align="right">Password:</th><td><input name="password" type="text" value="<%= tm_usuario(4) %>"/></td></tr>
+                <tr><th align="right">Password:</th><td><input name="password" type="password" value="<%= tm_usuario(4) %>"/><input name="cambiar" type="checkbox" onClick="cambiarTypeTextPassword(this.form);" title="Mostrar la contrase&ntilde;a"></td></tr>
 				<tr><td align="center"><input type="submit" value="Guardar"/></td><td align="center"><input type="button" value="Cancelar" onClick="location.href = '../Consultar'" title="Volver al Catalogo de Usuarios"/></td></tr>
 			</table>
 			</form>
