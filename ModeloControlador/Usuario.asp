@@ -38,12 +38,12 @@ end function
 
 'funcion que realiza la accion de insertar un nuevo registro en la tabla tm_usuario
 function agregarUsuario(codigo, nombres, apellidos, nacimiento, password)
-	dim insert_tm_usuario
+	dim insert_usuario
 	
 	conexion.open parametros_conexion
 	
-	insert_tm_usuario = "INSERT INTO tm_usuario(codigo_usuario, nombres_usuario, apellidos_usuario, nacimiento_usuario, password_usuario) VALUES('"&codigo&"', '"&nombres&"', '"&apellidos&"', '"&nacimiento&"', '"&password&"')"
-	conexion.execute(insert_tm_usuario)
+	insert_usuario = "INSERT INTO tm_usuario(codigo_usuario, nombres_usuario, apellidos_usuario, nacimiento_usuario, password_usuario) VALUES('"&codigo&"', '"&nombres&"', '"&apellidos&"', '"&nacimiento&"', '"&password&"')"
+	conexion.execute(insert_usuario)
 	
 	conexion.close
 end function
@@ -77,12 +77,12 @@ function buscarUsuario(codigo)
 end function
 
 'funcion que realiza la accion de modificar un registro de la tabla tm_usuario
-function modificarUsuario(codigo, identificador, nombres, apellidos, nacimiento, password)
+function modificarUsuario(codigo, nombres, apellidos, nacimiento, password)
 	dim update_usuario
 	
 	conexion.open parametros_conexion
 	
-	update_usuario = "UPDATE tm_usuario SET codigo_usuario = '"&identificador&"', nombres_usuario = '"&nombres&"', apellidos_usuario = '"&apellidos&"', nacimiento_usuario = '"&nacimiento&"', password_usuario = '"&password&"' WHERE codigo_usuario = '"&codigo&"'"
+    update_usuario = "UPDATE tm_usuario SET nombres_usuario = '"&nombres&"', apellidos_usuario = '"&apellidos&"', nacimiento_usuario = '"&nacimiento&"', password_usuario = '"&password&"' WHERE codigo_usuario = '"&codigo&"'"
 	conexion.execute(update_usuario)
 	
 	conexion.close
