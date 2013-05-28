@@ -1,9 +1,9 @@
 ﻿<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
 <!--#include file="../../../ModeloControlador/Conexion.asp"-->
-<!--#include file="../../../ModeloControlador/Tarea.asp"-->
+<!--#include file="../../../ModeloControlador/Usuario.asp"-->
 <%
 	dim consulta_sql
-	consulta_sql = sqlTareasXProyectoXUsuario(request.querystring("busqueda"))
+	consulta_sql = sqlUsuario()
 %>
 <html>
 	<head>
@@ -12,14 +12,17 @@
 		<link rel="stylesheet" href="../../_Recursos/CSS/patron.css" type="text/css"/>
 		<script type="text/javascript" src="../../_Recursos/JS/funciones.js"></script>
 	</head>
-	<body id="medio_formato">
+	<body id="medio_formato" onLoad="document.forms[0].user0.focus()">
 		<div id="medio_cuerpo">
 			<!--#include file="../../_Recursos/ASP/Paginador_parte1.asp"-->
+			<form>
 			<table border="1" class="cuadricula tabla">
 				<thead>
 					<tr>
-						<th>Nombre Tarea</th>
-						<th>Descripcion Tarea</th>
+						<th>Usuario</th>
+						<th>Nombres</th>
+						<th>Apellidos</th>
+						<th>Fecha de Nacimiento</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -28,8 +31,10 @@
 					do while not registros.eof and cuantos_registros < tam_pagina
 					%>
 					<tr>
-						<td><%= registros.fields("nombre_tarea") %></td>
-						<td><%= registros.fields("descripcion_tarea") %></td>
+						<td><input size="13" name="user<%= cuantos_registros %>" onKeyPress="return soloFlechas(event), movimientoVertical(event,<%= cuantos_registros %>)" onFocus="mostrarTareasXProyectoXUsuario('<%= registros.fields("codigo_usuario") %>')" onClick="mostrarTareasXProyectoXUsuario('<%= registros.fields("codigo_usuario") %>')" type="text" value="<%= registros.fields("codigo_usuario") %>"></td>
+						<td><%= registros.fields("nombres_usuario") %></td>
+						<td><%= registros.fields("apellidos_usuario") %></td>
+						<td><%= registros.fields("nacimiento_usuario") %></td>
 					</tr>
 					<%
 						cuantos_registros = cuantos_registros + 1
@@ -38,6 +43,7 @@
 					%>
 				</tbody>
 			</table>
+			</form>
 			<!--#include file="../../_Recursos/ASP/Paginador_parte2.asp"-->
 		</div>
 	</body>
