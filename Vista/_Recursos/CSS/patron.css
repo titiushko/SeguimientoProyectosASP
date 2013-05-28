@@ -23,7 +23,7 @@
 #cuerpo a:visited{text-decoration: none; color: #ffffff; font-weight: normal;}
 #cuerpo a:hover{text-decoration: underline; color: #F5FF3A; font-weight: normal;}
 #cuerpo p{text-align: center;}
-#cuerpo input{width: 200px;}
+#cuerpo input[type="text"], #cuerpo input[type="password"]{width: 200px;}
 #cuerpo input[type="submit"], #cuerpo input[type="button"]{width: 80px;}
 #cuerpo select, #cuerpo textarea{width: 200px;}
 
