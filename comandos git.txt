@@ -32,11 +32,20 @@ git branch -m <nombre rama local> <nuevo nombre rama local>
 - seleccionar
 git checkout <nombre rama local>
 
+- ver ramas locales y remotas
+git branch -a
+
 [remota]
 - eliminar
 git push origin :<nombre rama remota>
 o
 git push origin --delete <nombre rama remota>
+
+- ver ramas remotas
+git branch -r
+
+- inspeccionar un repositorio remoto
+git remote show origin
 
 COMMIT
 - agregar los archivos modificados al commit
