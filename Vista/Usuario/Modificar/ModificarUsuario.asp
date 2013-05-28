@@ -2,7 +2,7 @@
 <!--#include file="../../../ModeloControlador/Conexion.asp"-->
 <!--#include file="../../../ModeloControlador/Usuario.asp"-->
 <%
-	modificarUsuario request.form("codigo"),request.form("identificador"),request.form("nombres"),request.form("apellidos"),request.form("nacimiento"),request.form("password")
+	modificarUsuario request.form("codigo"),request.form("nombres"),request.form("apellidos"),request.form("nacimiento"),request.form("password")
 %>
 <html>
 	<head>

@@ -22,7 +22,7 @@
 			<form name="formulario" action="ModificarUsuario.asp" method="POST">
 			<table border="0" class="tabla">
 				<input name="codigo" type="text" value="<%= tm_usuario(0) %>" class="oculto"/>
-				<tr><th align="right">Usuario:</th><td><input name="identificador" type="text" value="<%= tm_usuario(0) %>"/></td></tr>
+				<tr><th align="right">Usuario:</th><td><input name="identificador" type="text" readonly value="<%= tm_usuario(0) %>"/></td></tr>
 				<tr><th align="right">Nombres:</th><td><input name="nombres" type="text" value="<%= tm_usuario(1) %>"/></td></tr>
 				<tr><th align="right">Apellidos:</th><td><input name="apellidos" type="text" value="<%= tm_usuario(2) %>"/></td></tr>
 				<tr><th align="right">Fecha de Nacimiento:</th><td><input name="nacimiento" type="text" value="<%= tm_usuario(3) %>" onClick="displayCalendar(document.formulario.nacimiento,'yyyy-mm-dd',this)" readonly="readonly"/></td></tr>
