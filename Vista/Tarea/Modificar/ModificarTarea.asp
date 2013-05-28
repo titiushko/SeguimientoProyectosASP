@@ -23,7 +23,7 @@
 				<tr><th align="right">Descripcion:</th><td><textarea disabled="disabled"><%= request.form("descripcion") %></textarea></td></tr>
 				<tr><th align="right">Proyecto:</th><td><input name="fin" type="text" value="<%= tm_proyecto(1) %>" disabled="disabled"/></td></tr>
 			</table>
-			<p>Se elimino la tarea exitosamente.</p>
+			<p>Se guardaron los cambios exitosamente.</p>
 			<a href="../Consultar/" title="Volver al Catalogo de Tareas">Volver</a>
 		</div>
 	</body>
