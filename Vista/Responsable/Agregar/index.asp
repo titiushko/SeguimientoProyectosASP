@@ -10,6 +10,7 @@
 <html>
 	<head>
 		<title>Seguimiento de Proyectos</title>
+		<link rel="shortcut icon" href="../../_Recursos/Imagenes/proyecto.png"></link>
 		<link rel="stylesheet" href="../../_Recursos/CSS/patron.css" type="text/css"/>
 		<link rel="stylesheet" href="../../_Recursos/Plugins/Calendario/calendario.css" type="text/css"/>
 		<script type="text/javascript" src="../../_Recursos/Plugins/Calendario/calendario.js"></script>

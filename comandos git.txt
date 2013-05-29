@@ -21,7 +21,7 @@ git rebase origin/master
 BRANCH
 [local]
 - crear y seleccionar
-git checkout –b <nombre rama local> origin/master
+git checkout -b <nombre rama local> origin/master
 
 - eliminar
 git branch -d <nombre rama local>
@@ -53,6 +53,12 @@ git add <ruta completa, nombre y extencion de archivo>
 
 - registrar los cambios en el repositorio realizando commit
 git commit
+
+- agregar los archivos modificados al commit y registrar los cambios en el repositorio realizando commit
+git commit -a
+
+- agregar los archivos modificados al commit y registrar los cambios en el repositorio realizando commit
+git commit -a -m "<comentario descriptivo del commit>"
 
 - deshacer cambios locales
 git reset --hard origin/master
