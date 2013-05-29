@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Seguimiento de Proyectos</title>
+		<link rel="shortcut icon" href="Vista/_Recursos/Imagenes/proyecto.png"></link>
 		<link rel="stylesheet" href="Vista/_Recursos/CSS/patron.css" type="text/css"/>
 	</head>
 	<body id="formato">
