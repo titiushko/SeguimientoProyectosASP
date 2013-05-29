@@ -54,10 +54,10 @@ git add <ruta completa, nombre y extencion de archivo>
 - registrar los cambios en el repositorio realizando commit
 git commit
 
-- agregar los archivos modificados al commit y registrar los cambios en el repositorio realizando commit
+- agregar los archivos modificados y registrar los cambios en el repositorio realizando commit
 git commit -a
 
-- agregar los archivos modificados al commit y registrar los cambios en el repositorio realizando commit
+- agregar los archivos modificados, registrar los cambios en el repositorio y agregar el comentario del commit
 git commit -a -m "<comentario descriptivo del commit>"
 
 - deshacer cambios locales

@@ -347,7 +347,7 @@ GO
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('201', '203', 'Jenifer', '1991-08-26');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('202', '321', 'Erika', '1982-09-04');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('203', '212', 'Erick', '1988-03-09');
-INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('204', '271', '"It큦 me, Mario"', '1989-08-08');
+INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('204', '271', 'Samus', '1989-08-08');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('205', '298', 'Ivonne', '1982-01-17');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('206', '294', 'Marta', '1987-09-18');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('207', '225', 'Daniel', '1992-08-05');
@@ -389,7 +389,7 @@ INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fec
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('243', '291', 'Lisbeth', '1983-10-12');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('244', '312', 'Iris', '1990-07-19');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('245', '219', 'Josue', '1986-12-05');
-INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('246', '364', '"It큦 me, Mario"', '1981-06-01');
+INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('246', '364', 'Samus', '1981-06-01');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('247', '244', 'Xiomara', '1989-04-15');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('248', '348', 'Jose', '1986-04-19');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('249', '209', 'Isabel', '1984-02-04');
@@ -476,7 +476,7 @@ INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fec
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('332', '332', 'Anthony', '');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('333', '296', 'Xiomara', '');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('334', '330', 'Ingris', '');
-INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('335', '279', '"It큦 me, Mario!"', '');
+INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('335', '279', 'Zelda', '');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('336', '383', 'Josue', '');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('337', '227', 'Alejandra', '');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('338', '386', 'Isabel', '');
@@ -498,7 +498,7 @@ INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fec
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('354', '347', 'Beatriz', '');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('355', '211', 'Beatriz', '');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('356', '315', 'Anthony', '');
-INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('357', '218', '"It큦 me, Mario"', '');
+INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('357', '218', 'Samus', '');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('358', '371', 'Rodolfo', '');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('359', '271', 'Boris', '');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('360', '337', 'Vladimir', '');
@@ -535,7 +535,7 @@ INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fec
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('393', '276', 'Ernesto', '');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('394', '340', 'Ernesto', '');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('395', '247', 'Beatriz', '');
-INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('396', '363', '"It큦 me, Mario!"', '');
+INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('396', '363', 'Zelda', '');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('397', '295', 'Herbert', '');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('398', '348', 'Yamileth', '');
 INSERT INTO tm_responsable(codigo_responsable, codigo_tarea, codigo_usuario, fecha_responsable) VALUES('399', '266', 'Guillermo', '');
@@ -575,8 +575,8 @@ INSERT INTO tm_usuario(codigo_usuario, nombres_usuario, apellidos_usuario, nacim
 INSERT INTO tm_usuario(codigo_usuario, nombres_usuario, apellidos_usuario, nacimiento_usuario, password_usuario) VALUES('Ingris', 'Willian Ingris', 'Pena Alvarado', '1995-04-09', '6631');
 INSERT INTO tm_usuario(codigo_usuario, nombres_usuario, apellidos_usuario, nacimiento_usuario, password_usuario) VALUES('Iris', 'Roxana Marlene', 'Cornejo Tobar', '1985-05-09', '70668');
 INSERT INTO tm_usuario(codigo_usuario, nombres_usuario, apellidos_usuario, nacimiento_usuario, password_usuario) VALUES('Isabel', 'Boris Marta', 'Romero Reyes', '1983-08-15', '35230');
-INSERT INTO tm_usuario(codigo_usuario, nombres_usuario, apellidos_usuario, nacimiento_usuario, password_usuario) VALUES('"It큦 me, Mario"', 'Willian Romeo', 'Guzman Contreras', '1980-04-25', '12011');
-INSERT INTO tm_usuario(codigo_usuario, nombres_usuario, apellidos_usuario, nacimiento_usuario, password_usuario) VALUES('"It큦 me, Mario!"', 'Ivan Claudia', 'Uceda Galdamez', '1987-01-31', 'H6C 1W4');
+INSERT INTO tm_usuario(codigo_usuario, nombres_usuario, apellidos_usuario, nacimiento_usuario, password_usuario) VALUES('Samus', 'Willian Romeo', 'Guzman Contreras', '1980-04-25', '12011');
+INSERT INTO tm_usuario(codigo_usuario, nombres_usuario, apellidos_usuario, nacimiento_usuario, password_usuario) VALUES('Zelda', 'Ivan Claudia', 'Uceda Galdamez', '1987-01-31', 'H6C 1W4');
 INSERT INTO tm_usuario(codigo_usuario, nombres_usuario, apellidos_usuario, nacimiento_usuario, password_usuario) VALUES('Ivette', 'Lisandro Roxana', 'Ponce Diaz', '1982-07-09', 'O6M 9K4');
 INSERT INTO tm_usuario(codigo_usuario, nombres_usuario, apellidos_usuario, nacimiento_usuario, password_usuario) VALUES('Ivonne', 'Edwin Alfredo', 'Diaz Vega', '1991-03-06', '22651');
 INSERT INTO tm_usuario(codigo_usuario, nombres_usuario, apellidos_usuario, nacimiento_usuario, password_usuario) VALUES('Jacqueline', 'Miguel Abigail', 'Portillo Mejia', '1986-10-08', '18739');
