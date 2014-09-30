@@ -1,0 +1,74 @@
+CONECTAR CUENTA DE USUARIO A REPOSITORIO
+git remote add origin https://titiushko@bitbucket.org/titiushko/seguimientoproyectosasp.git
+
+CONFIGURACION DE USUARIO
+git config --global user.name "titiushko"
+git config --global user.email titotauro@gmail.com
+
+PUSH
+- subir y actualizar todas las referencias remotas
+git push -u origin --all
+
+- subir solo la rama indicada
+git push origin <nombre rama local>
+
+FETCH
+git fetch origin
+
+REBASE
+git rebase origin/master
+
+BRANCH
+[local]
+- crear y seleccionar
+git checkout -b <nombre rama local> origin/master
+
+- eliminar
+git branch -d <nombre rama local>
+
+- cambiar nombre
+git branch -m <nombre rama local> <nuevo nombre rama local>
+
+- seleccionar
+git checkout <nombre rama local>
+
+- ver ramas locales y remotas
+git branch -a
+
+[remota]
+- eliminar
+git push origin :<nombre rama remota>
+o
+git push origin --delete <nombre rama remota>
+
+- ver ramas remotas
+git branch -r
+
+- inspeccionar un repositorio remoto
+git remote show origin
+
+COMMIT
+- agregar los archivos modificados al commit
+git add <ruta completa, nombre y extencion de archivo>
+
+- registrar los cambios en el repositorio realizando commit
+git commit
+
+- agregar los archivos modificados y registrar los cambios en el repositorio realizando commit
+git commit -a
+
+- agregar los archivos modificados, registrar los cambios en el repositorio y agregar el comentario del commit
+git commit -a -m "<comentario descriptivo del commit>"
+
+- deshacer cambios locales
+git reset --hard origin/master
+
+- revertir el ultimo commit
+git reset --soft HEAD~1
+
+CLEAN
+- limpiar cambios que no se incluiran en el commit para archivos que ya estan incluidos en el control de versiones
+git checkout -- .
+
+- borrar archivos no versionados
+git clean -f

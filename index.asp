@@ -1,0 +1,35 @@
+<!-- W.I.P. (Warning Idiot Programmer): Codigo Elavorado por Titiushko -->
+<html>
+	<head>
+		<title>Seguimiento de Proyectos</title>
+		<link rel="shortcut icon" href="Vista/_Recursos/Imagenes/proyecto.png"></link>
+		<link rel="stylesheet" href="Vista/_Recursos/CSS/patron.css" type="text/css"/>
+	</head>
+	<body id="formato">
+		<div id="cabeza">
+			<h1>SEGUIMIENTO DE PROYECTOS</h1>
+		</div>
+		<div id="cuerpo">
+			<h2>MENU</h2>
+			<table>
+				<tr>
+					<td><a href="Vista/Usuario/Consultar/"><h3>Usuarios</h3></a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><a href="Vista/Proyecto/Consultar/"><h3>Proyectos</h3></a></td>
+					<td><a href="Vista/Proyecto/ProyectosXUsuario/"><h3>Proyectos por Usuario</h3></a></td>
+				</tr>
+				<tr>
+					<td><a href="Vista/Tarea/Consultar/"><h3>Tareas</h3></a></td>
+					<td><a href="Vista/Tarea/TareasXProyecto/"><h3>Tareas por Proyecto</h3></a></td>
+					<td><a href="Vista/Tarea/TareasXUsuario/"><h3>Tareas por Usuario</h3></a></td>
+				</tr>
+				<tr>
+					<td><a href="Vista/Responsable/Consultar/"><h3>Responsables</h3></a></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
