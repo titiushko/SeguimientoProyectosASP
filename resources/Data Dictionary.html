@@ -1,0 +1,999 @@
+﻿<head>
+<title>::ContractStandards::</title>
+<style>
+  body {
+  font-family:verdana;
+  font-size:9pt;
+  }
+  td {
+  font-family:verdana;
+  font-size:9pt;
+  }
+  th {
+  font-family:verdana;
+  font-size:9pt;
+  background:#A9D5A7;
+  }
+  table
+  {
+  background:#238C1D;
+  }
+  tr
+  {
+  background:#ffffff;
+  }
+ </style>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="0" width="550px" align="center"><tr><td colspan="3" style="height:50;font-size:14pt;text-align:center;"><a name="index"></a><b>Index</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="550px" align="center"><tr><th>Sr</th><th>Object</th><th>Type</th></tr>
+<tr><td align="center">1</td><td><a href="#Table: [dbo].[AltPartyWeight]">[dbo].[AltPartyWeight]</a></td><td>Table</td></tr>
+<tr><td align="center">2</td><td><a href="#Table: [dbo].[AltQuestion]">[dbo].[AltQuestion]</a></td><td>Table</td></tr>
+<tr><td align="center">3</td><td><a href="#Table: [dbo].[AspNetRoles]">[dbo].[AspNetRoles]</a></td><td>Table</td></tr>
+<tr><td align="center">4</td><td><a href="#Table: [dbo].[AspNetUserClaims]">[dbo].[AspNetUserClaims]</a></td><td>Table</td></tr>
+<tr><td align="center">5</td><td><a href="#Table: [dbo].[AspNetUserLogins]">[dbo].[AspNetUserLogins]</a></td><td>Table</td></tr>
+<tr><td align="center">6</td><td><a href="#Table: [dbo].[AspNetUserRoles]">[dbo].[AspNetUserRoles]</a></td><td>Table</td></tr>
+<tr><td align="center">7</td><td><a href="#Table: [dbo].[AspNetUsers]">[dbo].[AspNetUsers]</a></td><td>Table</td></tr>
+<tr><td align="center">8</td><td><a href="#Table: [dbo].[Bookmark]">[dbo].[Bookmark]</a></td><td>Table</td></tr>
+<tr><td align="center">9</td><td><a href="#Table: [dbo].[Checklist]">[dbo].[Checklist]</a></td><td>Table</td></tr>
+<tr><td align="center">10</td><td><a href="#Table: [dbo].[ChecklistTermSheet]">[dbo].[ChecklistTermSheet]</a></td><td>Table</td></tr>
+<tr><td align="center">11</td><td><a href="#Table: [dbo].[Clause]">[dbo].[Clause]</a></td><td>Table</td></tr>
+<tr><td align="center">12</td><td><a href="#Table: [dbo].[ClauseAlts]">[dbo].[ClauseAlts]</a></td><td>Table</td></tr>
+<tr><td align="center">13</td><td><a href="#Table: [dbo].[ClauseChecklistMap]">[dbo].[ClauseChecklistMap]</a></td><td>Table</td></tr>
+<tr><td align="center">14</td><td><a href="#Table: [dbo].[ClauseChecklistSync]">[dbo].[ClauseChecklistSync]</a></td><td>Table</td></tr>
+<tr><td align="center">15</td><td><a href="#Table: [dbo].[ClauseContractMap]">[dbo].[ClauseContractMap]</a></td><td>Table</td></tr>
+<tr><td align="center">16</td><td><a href="#Table: [dbo].[ClauseStatus]">[dbo].[ClauseStatus]</a></td><td>Table</td></tr>
+<tr><td align="center">17</td><td><a href="#Table: [dbo].[ClauseTaxonomy]">[dbo].[ClauseTaxonomy]</a></td><td>Table</td></tr>
+<tr><td align="center">18</td><td><a href="#Table: [dbo].[Contract]">[dbo].[Contract]</a></td><td>Table</td></tr>
+<tr><td align="center">19</td><td><a href="#Table: [dbo].[ContractTaxonomy]">[dbo].[ContractTaxonomy]</a></td><td>Table</td></tr>
+<tr><td align="center">20</td><td><a href="#Table: [dbo].[DraftClause]">[dbo].[DraftClause]</a></td><td>Table</td></tr>
+<tr><td align="center">21</td><td><a href="#Table: [dbo].[DraftClauseAlts]">[dbo].[DraftClauseAlts]</a></td><td>Table</td></tr>
+<tr><td align="center">22</td><td><a href="#Table: [dbo].[DraftContract]">[dbo].[DraftContract]</a></td><td>Table</td></tr>
+<tr><td align="center">23</td><td><a href="#Table: [dbo].[KResolveLevel]">[dbo].[KResolveLevel]</a></td><td>Table</td></tr>
+<tr><td align="center">24</td><td><a href="#Table: [dbo].[Modules]">[dbo].[Modules]</a></td><td>Table</td></tr>
+<tr><td align="center">25</td><td><a href="#Table: [dbo].[Organization]">[dbo].[Organization]</a></td><td>Table</td></tr>
+<tr><td align="center">26</td><td><a href="#Table: [dbo].[OrganizationUserMap]">[dbo].[OrganizationUserMap]</a></td><td>Table</td></tr>
+<tr><td align="center">27</td><td><a href="#Table: [dbo].[PriorPasswords]">[dbo].[PriorPasswords]</a></td><td>Table</td></tr>
+<tr><td align="center">28</td><td><a href="#Table: [dbo].[ResolveClauseScoring]">[dbo].[ResolveClauseScoring]</a></td><td>Table</td></tr>
+<tr><td align="center">29</td><td><a href="#Table: [dbo].[ResolveContractScoring]">[dbo].[ResolveContractScoring]</a></td><td>Table</td></tr>
+<tr><td align="center">30</td><td><a href="#Table: [dbo].[SavedContract]">[dbo].[SavedContract]</a></td><td>Table</td></tr>
+<tr><td align="center">31</td><td><a href="#Table: [dbo].[SystemSetting]">[dbo].[SystemSetting]</a></td><td>Table</td></tr>
+<tr><td align="center">32</td><td><a href="#Table: [dbo].[UserRole]">[dbo].[UserRole]</a></td><td>Table</td></tr>
+<tr><td align="center">33</td><td><a href="#View:[dbo].[ClauseByClauseCategory_View]">[dbo].[ClauseByClauseCategory_View]</a></td><td>View</td></tr>
+<tr><td align="center">34</td><td><a href="#View:[dbo].[ContractByContractCategory_View]">[dbo].[ContractByContractCategory_View]</a></td><td>View</td></tr>
+<tr><td align="center">35</td><td><a href="#View:[dbo].[vw_ResolveClauseData]">[dbo].[vw_ResolveClauseData]</a></td><td>View</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[AltPartyWeight]"></a><b>Table: [dbo].[AltPartyWeight]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">5          </td><td align="left">16 KB</td><td align="left">8 KB</td><td align="left">8 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">alt_party_weight_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">party_weight</td><td width="200px">VARCHAR(50)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_AltPartyWeight</td><td width="300px">Clustered</td><td>alt_party_weight_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[AltQuestion]"></a><b>Table: [dbo].[AltQuestion]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">34         </td><td align="left">32 KB</td><td align="left">8 KB</td><td align="left">24 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">alt_question_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">question</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">AltQuestion_Question_Index</td><td width="300px">Nonclustered</td><td>question<br /></td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">PK_AltQuestion</td><td width="300px">Clustered</td><td>alt_question_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[AspNetRoles]"></a><b>Table: [dbo].[AspNetRoles]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">2          </td><td align="left">16 KB</td><td align="left">8 KB</td><td align="left">8 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">Id</td><td width="200px">NVARCHAR(256)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">Name</td><td width="200px">NVARCHAR(512)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_dbo.AspNetRoles</td><td width="300px">Clustered</td><td>Id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[AspNetUserClaims]"></a><b>Table: [dbo].[AspNetUserClaims]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">0          </td><td align="left">0 KB</td><td align="left">0 KB</td><td align="left">0 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">Id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">UserId</td><td width="200px">NVARCHAR(256)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">ClaimType</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">ClaimValue</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_dbo.AspNetUserClaims_dbo.AspNetUsers_UserId</td><td width="300px">UserId</td><td>[AspNetUsers].[Id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_dbo.AspNetUserClaims</td><td width="300px">Clustered</td><td>Id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[AspNetUserLogins]"></a><b>Table: [dbo].[AspNetUserLogins]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">0          </td><td align="left">0 KB</td><td align="left">0 KB</td><td align="left">0 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">LoginProvider</td><td width="200px">NVARCHAR(256)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">ProviderKey</td><td width="200px">NVARCHAR(256)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">UserId</td><td width="200px">NVARCHAR(256)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_dbo.AspNetUserLogins_dbo.AspNetUsers_UserId</td><td width="300px">UserId</td><td>[AspNetUsers].[Id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_dbo.AspNetUserLogins</td><td width="300px">Clustered</td><td>LoginProvider<br />ProviderKey<br />UserId<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[AspNetUserRoles]"></a><b>Table: [dbo].[AspNetUserRoles]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">21         </td><td align="left">16 KB</td><td align="left">8 KB</td><td align="left">8 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">UserId</td><td width="200px">NVARCHAR(256)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">RoleId</td><td width="200px">NVARCHAR(256)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_dbo.AspNetUserRoles_dbo.AspNetRoles_RoleId</td><td width="300px">RoleId</td><td>[AspNetRoles].[Id]</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">FK_dbo.AspNetUserRoles_dbo.AspNetUsers_UserId</td><td width="300px">UserId</td><td>[AspNetUsers].[Id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_dbo.AspNetUserRoles</td><td width="300px">Clustered</td><td>UserId<br />RoleId<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[AspNetUsers]"></a><b>Table: [dbo].[AspNetUsers]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">21         </td><td align="left">48 KB</td><td align="left">16 KB</td><td align="left">32 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">Id</td><td width="200px">NVARCHAR(256)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">Email</td><td width="200px">NVARCHAR(512)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">EmailConfirmed</td><td width="200px">BIT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">PasswordHash</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">SecurityStamp</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">6</td><td width="200px">PhoneNumber</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">7</td><td width="200px">PhoneNumberConfirmed</td><td width="200px">BIT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">8</td><td width="200px">TwoFactorEnabled</td><td width="200px">BIT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">9</td><td width="200px">LockoutEndDateUtc</td><td width="200px">DATETIME</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">10</td><td width="200px">LockoutEnabled</td><td width="200px">BIT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">11</td><td width="200px">AccessFailedCount</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">12</td><td width="200px">UserName</td><td width="200px">NVARCHAR(512)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">13</td><td width="200px">FirstName</td><td width="200px">NVARCHAR(512)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">14</td><td width="200px">LastName</td><td width="200px">NVARCHAR(512)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">15</td><td width="200px">CreateDate</td><td width="200px">DATETIME</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">16</td><td width="200px">LastLoginDate</td><td width="200px">DATETIME</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">17</td><td width="200px">LastPasswordChangedDate</td><td width="200px">DATETIME</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">18</td><td width="200px">LinkedinId</td><td width="200px">VARCHAR(50)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">AspNetUsers_UserName_Index</td><td width="300px">Nonclustered</td><td>UserName<br /></td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">PK_dbo.AspNetUsers</td><td width="300px">Clustered</td><td>Id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[Bookmark]"></a><b>Table: [dbo].[Bookmark]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">303        </td><td align="left">48 KB</td><td align="left">32 KB</td><td align="left">16 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">bookmark_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">user_id</td><td width="200px">NVARCHAR(256)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">contract_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">checklist_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">clause_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">6</td><td width="200px">module_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_Bookmark_AspNetUsers</td><td width="300px">user_id</td><td>[AspNetUsers].[Id]</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">FK_Bookmark_Checklist</td><td width="300px">checklist_id</td><td>[Checklist].[checklist_id]</td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">FK_Bookmark_Clause</td><td width="300px">clause_id</td><td>[Clause].[clause_id]</td></tr>
+<tr><td width="25px" align="center">4</td><td width="300px">FK_Bookmark_Contract</td><td width="300px">contract_id</td><td>[Contract].[contract_id]</td></tr>
+<tr><td width="25px" align="center">5</td><td width="300px">FK_Bookmark_Modules</td><td width="300px">module_id</td><td>[Modules].[module_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_Bookmark</td><td width="300px">Clustered</td><td>bookmark_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[Checklist]"></a><b>Table: [dbo].[Checklist]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">69         </td><td align="left">800 KB</td><td align="left">712 KB</td><td align="left">64 KB</td><td align="left">24 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">checklist_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">organization_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">title</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">refset</td><td width="200px">VARCHAR(50)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">filename</td><td width="200px">VARCHAR(150)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">6</td><td width="200px">outline_html</td><td width="200px">TEXT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">7</td><td width="200px">contract_html_model</td><td width="200px">TEXT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">8</td><td width="200px">locked</td><td width="200px">BIT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">9</td><td width="200px">date_created</td><td width="200px">DATETIME</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">10</td><td width="200px">owner</td><td width="200px">NVARCHAR(512)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">11</td><td width="200px">last_updated</td><td width="200px">DATETIME</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">12</td><td width="200px">updater</td><td width="200px">NVARCHAR(512)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_Checklist_Organization</td><td width="300px">organization_id</td><td>[Organization].[organization_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Default Constraints</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Value</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">DF__Checklist__locke__31EC6D26</td><td width="300px">locked</td><td>((0))</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Triggers</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Description</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">TR_AutoScoring</td><td></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">Checklist_Filename_Index</td><td width="300px">Nonclustered</td><td>organization_id<br />filename<br /></td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">Checklist_Refset_Index</td><td width="300px">Nonclustered</td><td>organization_id<br />refset<br /></td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">Checklist_Title_Index</td><td width="300px">Nonclustered</td><td>organization_id<br />title<br /></td></tr>
+<tr><td width="25px" align="center">4</td><td width="300px">PK_Checklist</td><td width="300px">Clustered</td><td>checklist_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[ChecklistTermSheet]"></a><b>Table: [dbo].[ChecklistTermSheet]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">0          </td><td align="left">0 KB</td><td align="left">0 KB</td><td align="left">0 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">checklist_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">rsltpt_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">valueLabel</td><td width="200px">VARCHAR(50)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">taValue</td><td width="200px">VARCHAR(-1)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_ChecklistTermSheet_Checklist</td><td width="300px">checklist_id</td><td>[Checklist].[checklist_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_ChecklistTermSheet</td><td width="300px">Clustered</td><td>id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[Clause]"></a><b>Table: [dbo].[Clause]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">1175       </td><td align="left">8856 KB</td><td align="left">8648 KB</td><td align="left">160 KB</td><td align="left">48 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">clause_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">contract_tax_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">clause_tax_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">organization_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">heading</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">6</td><td width="200px">description</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">7</td><td width="200px">clause_caption</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">8</td><td width="200px">clause_text</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">9</td><td width="200px">intro_text</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">10</td><td width="200px">end_text</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">11</td><td width="200px">filename</td><td width="200px">VARCHAR(150)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">12</td><td width="200px">discussion</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">13</td><td width="200px">status</td><td width="200px">VARCHAR(15)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">14</td><td width="200px">alt_weight</td><td width="200px">BIT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">15</td><td width="200px">alt_question_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">16</td><td width="200px">fastcase_json</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">17</td><td width="200px">locked</td><td width="200px">BIT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">18</td><td width="200px">hits</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">19</td><td width="200px">date_created</td><td width="200px">DATETIME</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">20</td><td width="200px">owner</td><td width="200px">NVARCHAR(512)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">21</td><td width="200px">last_updated</td><td width="200px">DATETIME</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">22</td><td width="200px">updater</td><td width="200px">NVARCHAR(512)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_Clause_AltQuestion</td><td width="300px">alt_question_id</td><td>[AltQuestion].[alt_question_id]</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">FK_Clause_ClauseTaxonomy</td><td width="300px">clause_tax_id</td><td>[ClauseTaxonomy].[clause_tax_id]</td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">FK_Clause_ContractTaxonomy</td><td width="300px">contract_tax_id</td><td>[ContractTaxonomy].[contract_tax_id]</td></tr>
+<tr><td width="25px" align="center">4</td><td width="300px">FK_Clause_Organization</td><td width="300px">organization_id</td><td>[Organization].[organization_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Default Constraints</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Value</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">DF__Clause__alt_weig__3E52440B</td><td width="300px">alt_weight</td><td>((0))</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">DF__Clause__hits__403A8C7D</td><td width="300px">hits</td><td>((0))</td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">DF__Clause__locked__3F466844</td><td width="300px">locked</td><td>((0))</td></tr>
+<tr><td width="25px" align="center">4</td><td width="300px">DF__Clause__status__3D5E1FD2</td><td width="300px">status</td><td>('Draft')</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">Clause_Filename_Index</td><td width="300px">Nonclustered</td><td>organization_id<br />filename<br /></td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">Clause_Heading_Index</td><td width="300px">Nonclustered</td><td>heading<br /></td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">PK_Clause</td><td width="300px">Clustered</td><td>clause_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[ClauseAlts]"></a><b>Table: [dbo].[ClauseAlts]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">780        </td><td align="left">728 KB</td><td align="left">664 KB</td><td align="left">16 KB</td><td align="left">48 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">alt_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">clause_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">alt_question_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">alt_party_weight_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">organization_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">6</td><td width="200px">alt_tab</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">7</td><td width="200px">alt_content</td><td width="200px">VARCHAR(-1)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_ClauseAlts_AltPartyWeight</td><td width="300px">alt_party_weight_id</td><td>[AltPartyWeight].[alt_party_weight_id]</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">FK_ClauseAlts_AltQuestion</td><td width="300px">alt_question_id</td><td>[AltQuestion].[alt_question_id]</td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">FK_ClauseAlts_Clause</td><td width="300px">clause_id</td><td>[Clause].[clause_id]</td></tr>
+<tr><td width="25px" align="center">4</td><td width="300px">FK_ClauseAlts_Organization</td><td width="300px">organization_id</td><td>[Organization].[organization_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_ClauseAlts</td><td width="300px">Clustered</td><td>alt_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[ClauseChecklistMap]"></a><b>Table: [dbo].[ClauseChecklistMap]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">5423       </td><td align="left">976 KB</td><td align="left">576 KB</td><td align="left">304 KB</td><td align="left">96 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">clause_checklist_map_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">checklist_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">heading_checklist</td><td width="200px">VARCHAR(250)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">commonality</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">consistency</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">6</td><td width="200px">parent_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">7</td><td width="200px">levl</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">8</td><td width="200px">sort_order</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">9</td><td width="200px">unique_branch_id</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">10</td><td width="200px">status</td><td width="200px">CHAR(1)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">11</td><td width="200px">flagged</td><td width="200px">BIT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_ClauseChecklistMap_Checklist</td><td width="300px">checklist_id</td><td>[Checklist].[checklist_id]</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">FK_ClauseChecklistMap_ClauseChecklistMap</td><td width="300px">parent_id</td><td>[ClauseChecklistMap].[clause_checklist_map_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Default Constraints</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Value</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">DF__ClauseChe__flagg__38996AB5</td><td width="300px">flagged</td><td>((0))</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">ClauseChecklistMap_UniqueBranchId_Index</td><td width="300px">Nonclustered</td><td>unique_branch_id<br /></td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">PK_ClauseChecklistMap</td><td width="300px">Clustered</td><td>clause_checklist_map_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[ClauseChecklistSync]"></a><b>Table: [dbo].[ClauseChecklistSync]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">1607       </td><td align="left">64 KB</td><td align="left">48 KB</td><td align="left">16 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">clause_checklist_sync_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">clause_checklist_map_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">clause_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">draft_clause_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">clause_checklist_status_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_ClauseChecklistSync_Clause</td><td width="300px">clause_id</td><td>[Clause].[clause_id]</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">FK_ClauseChecklistSync_ClauseChecklistMap</td><td width="300px">clause_checklist_map_id</td><td>[ClauseChecklistMap].[clause_checklist_map_id]</td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">FK_ClauseChecklistSync_ClauseStatus</td><td width="300px">clause_checklist_status_id</td><td>[ClauseStatus].[clause_status_id]</td></tr>
+<tr><td width="25px" align="center">4</td><td width="300px">FK_ClauseChecklistSync_DraftClause</td><td width="300px">draft_clause_id</td><td>[DraftClause].[draft_clause_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_ClauseChecklistSync</td><td width="300px">Clustered</td><td>clause_checklist_sync_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[ClauseContractMap]"></a><b>Table: [dbo].[ClauseContractMap]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">38         </td><td align="left">16 KB</td><td align="left">8 KB</td><td align="left">8 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">clause_contract_map_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">contract_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">clause_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">draft_clause_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">clause_contract_string_id</td><td width="200px">VARCHAR(50)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">6</td><td width="200px">clause_contract_status_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_ClauseContractMap_Clause</td><td width="300px">clause_id</td><td>[Clause].[clause_id]</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">FK_ClauseContractMap_ClauseStatus</td><td width="300px">clause_contract_status_id</td><td>[ClauseStatus].[clause_status_id]</td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">FK_ClauseContractMap_Contract</td><td width="300px">contract_id</td><td>[Contract].[contract_id]</td></tr>
+<tr><td width="25px" align="center">4</td><td width="300px">FK_ClauseContractMap_DraftClause</td><td width="300px">draft_clause_id</td><td>[DraftClause].[draft_clause_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_ClauseContractMap</td><td width="300px">Clustered</td><td>clause_contract_map_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[ClauseStatus]"></a><b>Table: [dbo].[ClauseStatus]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">3          </td><td align="left">16 KB</td><td align="left">8 KB</td><td align="left">8 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">clause_status_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">status_name</td><td width="200px">VARCHAR(50)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_ClauseStatus</td><td width="300px">Clustered</td><td>clause_status_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[ClauseTaxonomy]"></a><b>Table: [dbo].[ClauseTaxonomy]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">351        </td><td align="left">72 KB</td><td align="left">24 KB</td><td align="left">48 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">clause_tax_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">name</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">parent_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">levl</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">sort_order</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_ClauseTaxonomy_ClauseTaxonomy</td><td width="300px">parent_id</td><td>[ClauseTaxonomy].[clause_tax_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">ClauseTaxonomy_Name_Index</td><td width="300px">Nonclustered</td><td>name<br /></td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">PK_ClauseTaxonomy</td><td width="300px">Clustered</td><td>clause_tax_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[Contract]"></a><b>Table: [dbo].[Contract]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">67         </td><td align="left">2704 KB</td><td align="left">2616 KB</td><td align="left">48 KB</td><td align="left">40 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">contract_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">checklist_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">contract_tax_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">organization_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">title</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">6</td><td width="200px">filename</td><td width="200px">VARCHAR(150)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">7</td><td width="200px">contract_html</td><td width="200px">TEXT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">8</td><td width="200px">overview</td><td width="200px">TEXT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">9</td><td width="200px">parent_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">10</td><td width="200px">levl</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">11</td><td width="200px">status</td><td width="200px">VARCHAR(15)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">12</td><td width="200px">locked</td><td width="200px">BIT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">13</td><td width="200px">date_created</td><td width="200px">DATETIME</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">14</td><td width="200px">owner</td><td width="200px">NVARCHAR(512)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">15</td><td width="200px">last_updated</td><td width="200px">DATETIME</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">16</td><td width="200px">updater</td><td width="200px">NVARCHAR(512)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_Contract_Checklist</td><td width="300px">checklist_id</td><td>[Checklist].[checklist_id]</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">FK_Contract_ContractTaxonomy</td><td width="300px">contract_tax_id</td><td>[ContractTaxonomy].[contract_tax_id]</td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">FK_Contract_Organization</td><td width="300px">organization_id</td><td>[Organization].[organization_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Default Constraints</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Value</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">DF__Contract__locked__4D94879B</td><td width="300px">locked</td><td>((0))</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">DF__Contract__status__4CA06362</td><td width="300px">status</td><td>('Draft')</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">Contract_Filename_Index</td><td width="300px">Nonclustered</td><td>organization_id<br />filename<br /></td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">Contract_Title_Index</td><td width="300px">Nonclustered</td><td>organization_id<br />title<br /></td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">PK_Contract</td><td width="300px">Clustered</td><td>contract_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[ContractTaxonomy]"></a><b>Table: [dbo].[ContractTaxonomy]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">70         </td><td align="left">32 KB</td><td align="left">8 KB</td><td align="left">24 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">contract_tax_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">name</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">parent_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">levl</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">sort_order</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_ContractTaxonomy_ContractTaxonomy</td><td width="300px">parent_id</td><td>[ContractTaxonomy].[contract_tax_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">ContractTaxonomy_Name_Index</td><td width="300px">Nonclustered</td><td>name<br /></td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">PK_ContractTaxonomy</td><td width="300px">Clustered</td><td>contract_tax_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[DraftClause]"></a><b>Table: [dbo].[DraftClause]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">9          </td><td align="left">248 KB</td><td align="left">96 KB</td><td align="left">48 KB</td><td align="left">104 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">draft_clause_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">clause_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">contract_tax_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">clause_tax_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">organization_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">6</td><td width="200px">heading</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">7</td><td width="200px">description</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">8</td><td width="200px">clause_caption</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">9</td><td width="200px">clause_text</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">10</td><td width="200px">intro_text</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">11</td><td width="200px">end_text</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">12</td><td width="200px">filename</td><td width="200px">VARCHAR(150)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">13</td><td width="200px">discussion</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">14</td><td width="200px">status</td><td width="200px">VARCHAR(15)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">15</td><td width="200px">alt_weight</td><td width="200px">BIT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">16</td><td width="200px">alt_question_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">17</td><td width="200px">fastcase_json</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">18</td><td width="200px">last_updated</td><td width="200px">DATETIME</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">19</td><td width="200px">updater</td><td width="200px">NVARCHAR(512)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_DraftClause_AltQuestion</td><td width="300px">alt_question_id</td><td>[AltQuestion].[alt_question_id]</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">FK_DraftClause_Clause</td><td width="300px">clause_id</td><td>[Clause].[clause_id]</td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">FK_DraftClause_ClauseTaxonomy</td><td width="300px">clause_tax_id</td><td>[ClauseTaxonomy].[clause_tax_id]</td></tr>
+<tr><td width="25px" align="center">4</td><td width="300px">FK_DraftClause_ContractTaxonomy</td><td width="300px">contract_tax_id</td><td>[ContractTaxonomy].[contract_tax_id]</td></tr>
+<tr><td width="25px" align="center">5</td><td width="300px">FK_DraftClause_Organization</td><td width="300px">organization_id</td><td>[Organization].[organization_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Default Constraints</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Value</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">DF__DraftClau__alt_w__5441852A</td><td width="300px">alt_weight</td><td>((0))</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">DF__DraftClau__statu__534D60F1</td><td width="300px">status</td><td>('Draft')</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">DraftClause_Filename_Index</td><td width="300px">Nonclustered</td><td>organization_id<br />filename<br /></td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">DraftClause_Heading_Index</td><td width="300px">Nonclustered</td><td>heading<br /></td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">PK_DraftClause</td><td width="300px">Clustered</td><td>draft_clause_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[DraftClauseAlts]"></a><b>Table: [dbo].[DraftClauseAlts]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">20         </td><td align="left">40 KB</td><td align="left">24 KB</td><td align="left">16 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">draft_alt_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">draft_clause_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">alt_question_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">alt_party_weight_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">organization_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">6</td><td width="200px">alt_tab</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">7</td><td width="200px">alt_content</td><td width="200px">VARCHAR(-1)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_DraftClauseAlts_AltPartyWeight</td><td width="300px">alt_party_weight_id</td><td>[AltPartyWeight].[alt_party_weight_id]</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">FK_DraftClauseAlts_AltQuestion</td><td width="300px">alt_question_id</td><td>[AltQuestion].[alt_question_id]</td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">FK_DraftClauseAlts_DraftClause</td><td width="300px">draft_clause_id</td><td>[DraftClause].[draft_clause_id]</td></tr>
+<tr><td width="25px" align="center">4</td><td width="300px">FK_DraftClauseAlts_Organization</td><td width="300px">organization_id</td><td>[Organization].[organization_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_DraftClauseAlts</td><td width="300px">Clustered</td><td>draft_alt_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[DraftContract]"></a><b>Table: [dbo].[DraftContract]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">14         </td><td align="left">512 KB</td><td align="left">456 KB</td><td align="left">40 KB</td><td align="left">16 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">draft_contract_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">contract_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">checklist_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">contract_tax_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">organization_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">6</td><td width="200px">title</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">7</td><td width="200px">filename</td><td width="200px">VARCHAR(150)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">8</td><td width="200px">contract_html</td><td width="200px">TEXT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">9</td><td width="200px">overview</td><td width="200px">TEXT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">10</td><td width="200px">status</td><td width="200px">VARCHAR(15)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">11</td><td width="200px">last_updated</td><td width="200px">DATETIME</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">12</td><td width="200px">updater</td><td width="200px">NVARCHAR(512)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_DraftContract_Checklist</td><td width="300px">checklist_id</td><td>[Checklist].[checklist_id]</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">FK_DraftContract_Contract</td><td width="300px">contract_id</td><td>[Contract].[contract_id]</td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">FK_DraftContract_ContractTaxonomy</td><td width="300px">contract_tax_id</td><td>[ContractTaxonomy].[contract_tax_id]</td></tr>
+<tr><td width="25px" align="center">4</td><td width="300px">FK_DraftContract_Organization</td><td width="300px">organization_id</td><td>[Organization].[organization_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Default Constraints</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Value</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">DF__DraftCont__statu__6D0D32F4</td><td width="300px">status</td><td>('Draft')</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">DraftContract_Filename_Index</td><td width="300px">Nonclustered</td><td>organization_id<br />filename<br /></td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">DraftContract_Title_Index</td><td width="300px">Nonclustered</td><td>organization_id<br />title<br /></td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">PK_DraftContract</td><td width="300px">Clustered</td><td>draft_contract_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[KResolveLevel]"></a><b>Table: [dbo].[KResolveLevel]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">1          </td><td align="left">16 KB</td><td align="left">8 KB</td><td align="left">8 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">name</td><td width="200px">NCHAR(100)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_KResolveLevel</td><td width="300px">Clustered</td><td>id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[Modules]"></a><b>Table: [dbo].[Modules]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">6          </td><td align="left">32 KB</td><td align="left">8 KB</td><td align="left">24 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">module_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">name</td><td width="200px">VARCHAR(40)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">last_updated</td><td width="200px">DATETIME</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">updater</td><td width="200px">NVARCHAR(512)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">Modules_Name_Index</td><td width="300px">Nonclustered</td><td>name<br /></td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">PK_Modules</td><td width="300px">Clustered</td><td>module_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[Organization]"></a><b>Table: [dbo].[Organization]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">5          </td><td align="left">48 KB</td><td align="left">8 KB</td><td align="left">40 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">organization_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">user_id</td><td width="200px">NVARCHAR(256)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">name</td><td width="200px">VARCHAR(500)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">data_set</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">kresolve_level_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">6</td><td width="200px">private_library</td><td width="200px">BIT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_Organization_AspNetUsers</td><td width="300px">user_id</td><td>[AspNetUsers].[Id]</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">FK_Organization_KResolveLevel</td><td width="300px">kresolve_level_id</td><td>[KResolveLevel].[id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">Organization_DataSet_Index</td><td width="300px">Nonclustered</td><td>data_set<br /></td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">Organization_Name_Index</td><td width="300px">Nonclustered</td><td>name<br /></td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">PK_Organization</td><td width="300px">Clustered</td><td>organization_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[OrganizationUserMap]"></a><b>Table: [dbo].[OrganizationUserMap]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">25         </td><td align="left">16 KB</td><td align="left">8 KB</td><td align="left">8 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">org_user_map_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">organization_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">user_id</td><td width="200px">NVARCHAR(256)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">user_role_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_OrganizationUserMap_AspNetUsers</td><td width="300px">user_id</td><td>[AspNetUsers].[Id]</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">FK_OrganizationUserMap_Organization</td><td width="300px">organization_id</td><td>[Organization].[organization_id]</td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">FK_OrganizationUserMap_UserRole</td><td width="300px">user_role_id</td><td>[UserRole].[id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_OrganizationUserMap</td><td width="300px">Clustered</td><td>org_user_map_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[PriorPasswords]"></a><b>Table: [dbo].[PriorPasswords]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">22         </td><td align="left">16 KB</td><td align="left">8 KB</td><td align="left">8 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">UserId</td><td width="200px">NVARCHAR(256)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">OldPasswordHash</td><td width="200px">NVARCHAR(512)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_PriorPasswords_AspNetUsers</td><td width="300px">UserId</td><td>[AspNetUsers].[Id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_PriorPasswords</td><td width="300px">Clustered</td><td>UserId<br />OldPasswordHash<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[ResolveClauseScoring]"></a><b>Table: [dbo].[ResolveClauseScoring]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">0          </td><td align="left">0 KB</td><td align="left">0 KB</td><td align="left">0 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">ClauseScoring_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">ClauseScoring</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">MatchAllocation</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">TextVarianceWeight</td><td width="200px">NUMERIC</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">checklist_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_ResolveClauseScoring_ResolveChecklist</td><td width="300px">checklist_id</td><td>[Checklist].[checklist_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Check  Constraints</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Definition</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">CH_MatchAllocation</td><td width="300px">MatchAllocation</td><td>([MatchAllocation]>=(0) AND [MatchAllocation]<=(100))</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">CH_TextVarianceWeight</td><td width="300px">TextVarianceWeight</td><td>([TextVarianceWeight]>=(0.00) AND [TextVarianceWeight]<=(1.00))</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_ResolveClauseScoring</td><td width="300px">Clustered</td><td>ClauseScoring_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[ResolveContractScoring]"></a><b>Table: [dbo].[ResolveContractScoring]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">0          </td><td align="left">0 KB</td><td align="left">0 KB</td><td align="left">0 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">DocumentScoring_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">DocumentScoring</td><td width="200px">VARCHAR(500)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">LowRange</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">HighRange</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">checklist_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_ResolveContractScoring_ResolveChecklist</td><td width="300px">checklist_id</td><td>[Checklist].[checklist_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Check  Constraints</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Definition</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">CH_HighRange</td><td width="300px">HighRange</td><td>([HighRange]>=(0) AND [HighRange]<=(100))</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">CH_LowRange</td><td width="300px">LowRange</td><td>([LowRange]>=(0) AND [LowRange]<=(100))</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_ResolveContractScoring</td><td width="300px">Clustered</td><td>DocumentScoring_id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[SavedContract]"></a><b>Table: [dbo].[SavedContract]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">0          </td><td align="left">0 KB</td><td align="left">0 KB</td><td align="left">0 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">organization_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">html</td><td width="200px">TEXT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">created_date</td><td width="200px">DATETIME</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">date_uptated</td><td width="200px">DATETIME</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">6</td><td width="200px">creator</td><td width="200px">NVARCHAR(256)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">7</td><td width="200px">updater</td><td width="200px">NVARCHAR(256)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_SavedContract_AspNetUsers_Creator</td><td width="300px">creator</td><td>[AspNetUsers].[Id]</td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">FK_SavedContract_AspNetUsers_Updater</td><td width="300px">updater</td><td>[AspNetUsers].[Id]</td></tr>
+<tr><td width="25px" align="center">3</td><td width="300px">FK_SavedContract_Organization</td><td width="300px">organization_id</td><td>[Organization].[organization_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_SavedContract</td><td width="300px">Clustered</td><td>id<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[SystemSetting]"></a><b>Table: [dbo].[SystemSetting]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">13         </td><td align="left">32 KB</td><td align="left">8 KB</td><td align="left">24 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">system_setting_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">module_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">item</td><td width="200px">VARCHAR(255)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">editable_item</td><td width="200px">BIT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">value</td><td width="200px">VARCHAR(255)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">6</td><td width="200px">default_module_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">7</td><td width="200px">default_value</td><td width="200px">VARCHAR(255)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">8</td><td width="200px">last_updated</td><td width="200px">DATETIME</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">9</td><td width="200px">updater</td><td width="200px">NVARCHAR(512)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Refrence Keys</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Reference To</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">FK_SystemSetting_Modules</td><td width="300px">module_id</td><td>[Modules].[module_id]</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Default Constraints</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Column</th><th>Value</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">DF__SystemSet__edita__014935CB</td><td width="300px">editable_item</td><td>((0))</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_CS_SystemSetting</td><td width="300px">Clustered</td><td>system_setting_id<br /></td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">SystemSetting_Item_Index</td><td width="300px">Nonclustered</td><td>item<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="Table: [dbo].[UserRole]"></a><b>Table: [dbo].[UserRole]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+<tr><td align="left">4          </td><td align="left">32 KB</td><td align="left">8 KB</td><td align="left">24 KB</td><td align="left">0 KB</td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">name</td><td width="200px">VARCHAR(200)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Indexes</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Type</th><th>Columns</th></tr>
+<tr><td width="25px" align="center">1</td><td width="300px">PK_UserRole</td><td width="300px">Clustered</td><td>id<br /></td></tr>
+<tr><td width="25px" align="center">2</td><td width="300px">UserRole_Name_Index</td><td width="300px">Nonclustered</td><td>name<br /></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="View:[dbo].[ClauseByClauseCategory_View]"></a><b>View:[dbo].[ClauseByClauseCategory_View]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+ 
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">id</td><td width="200px">BIGINT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">clause_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">clause</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">filename</td><td width="200px">VARCHAR(150)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">category_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">6</td><td width="200px">parent_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">7</td><td width="200px">category</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="View:[dbo].[ContractByContractCategory_View]"></a><b>View:[dbo].[ContractByContractCategory_View]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+ 
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">id</td><td width="200px">BIGINT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">contract_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">contract</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">filename</td><td width="200px">VARCHAR(150)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">category_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">6</td><td width="200px">parent_id</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">7</td><td width="200px">category</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td align="right"><a href="#index">Index</a></td></tr>
+<tr><th align="left"><a name="View:[dbo].[vw_ResolveClauseData]"></a><b>View:[dbo].[vw_ResolveClauseData]</b></th></tr>
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><th align="left">No Rows</th><th align="left">Reserved</th><th align="left">Size Data</th><th align="left">Size Indices</th><th align="left">No Used</th></tr>
+ 
+</table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Description</b></td></tr><tr><td></td></tr></table><br />
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Table Columns</b></td></tr></table>
+<table border="0" colorbackground="#249732" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Name</th><th>Datatype</th><th>Nullable</th><th>Description</th><th>Value</th></tr>
+<tr><td width="30px" align="center">1</td><td width="200px">id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">2</td><td width="200px">headgroup</td><td width="200px">VARCHAR(250)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">3</td><td width="200px">refset</td><td width="200px">VARCHAR(50)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">4</td><td width="200px">parent</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">5</td><td width="200px">dataTcg</td><td width="200px">VARCHAR(100)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">6</td><td width="200px">ctypeid</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">7</td><td width="200px">ctype</td><td width="200px">VARCHAR(50)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">8</td><td width="200px">heading</td><td width="200px">VARCHAR(250)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">9</td><td width="200px">commonality</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">10</td><td width="200px">consistency</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">11</td><td width="200px">status</td><td width="200px">CHAR(1)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">12</td><td width="200px">flagged</td><td width="200px">VARCHAR(5)</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">13</td><td width="200px">guidance</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">14</td><td width="200px">standard</td><td width="200px">NVARCHAR(-1)</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">15</td><td width="200px">levl</td><td width="200px">INT</td><td width="50px" align="center">Y</td><td width="650px"></td><td width="650px"></td></tr>
+<tr><td width="30px" align="center">16</td><td width="200px">checklist_id</td><td width="200px">INT</td><td width="50px" align="center">N</td><td width="650px"></td><td width="650px"></td></tr>
+</table><br />
+<p>
+<br>
+<p>
+<table border="0" cellspacing="0" cellpadding="0" width="1250px"><tr><td><b>Procedure Name</b></td></tr></table>
+<table border="0" cellspacing="1" cellpadding="0" width="1250px"><tr><th>Sr.</th><th>Schema</th><th>Procedure Name</th><th>Creado El</th><th>UltimaModificacion</th></tr>
+</table>
+</body>
+</html>
